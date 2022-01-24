@@ -1,7 +1,7 @@
-all: command test test2
-command: command.cpp
-	g++ -std=c++11 -Wall command.cpp -o command
-test: test.cpp
-	g++ -std=c++11 -Wall -ggdb test.cpp -o test
-test2: test2.cpp
-	g++ -std=c++11 -Wall -ggdb test2.cpp -o test2
+all: master ex_prog1 ex_prog2
+master: master.cpp
+	g++ -std=c++11 -Wall master.cpp -o master
+ex_prog1: ex_prog1.cpp
+	g++ -std=c++11 -Wall -ggdb ex_prog1.cpp -o ex_prog1
+ex_prog2: ex_prog2.cpp
+	g++ -std=c++11 -Wall -ggdb ex_prog2.cpp -o ex_prog2
