@@ -1,0 +1,43 @@
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-120.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) Reading symbols from /escnfs/home/dsimone2/UseBirch/ex_prog1...done.
+(gdb) (gdb) Temporary breakpoint 1 at 0x400756: file ex_prog1.cpp, line 8.
+Starting program: /escnfs/home/dsimone2/UseBirch/./ex_prog1 
+
+Temporary breakpoint 1, main () at ex_prog1.cpp:8
+8	    int x = 5;
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-292.el7.x86_64 glibc-2.17-325.el7_9.x86_64 libgcc-4.8.5-39.el7.x86_64 libgcc-4.8.5-44.el7.x86_64 libstdc++-4.8.5-39.el7.x86_64 libstdc++-4.8.5-44.el7.x86_64
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 12	        z[y] = y;
+(gdb) 13	        std::cout << "y: " << y <<  " z: " << z[y] << "\n";
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 12	        z[y] = y;
+(gdb) 13	        std::cout << "y: " << y <<  " z: " << z[y] << "\n";
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 12	        z[y] = y;
+(gdb) 13	        std::cout << "y: " << y <<  " z: " << z[y] << "\n";
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 12	        z[y] = y;
+(gdb) 13	        std::cout << "y: " << y <<  " z: " << z[y] << "\n";
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 12	        z[y] = y;
+(gdb) 13	        std::cout << "y: " << y <<  " z: " << z[y] << "\n";
+(gdb) 10	    for (int y = 0 ; y < x; y++)
+(gdb) 15	    return 0;
+(gdb) 16	}(gdb) 0x00007ffff720f555 in __libc_start_main () from /lib64/libc.so.6
+(gdb) Single stepping until exit from function __libc_start_main,
+which has no line number information.
+y: 0 z: 0
+y: 1 z: 1
+y: 2 z: 2
+y: 3 z: 3
+y: 4 z: 4
+[Inferior 1 (process 26875) exited normally]
+(gdb) 
