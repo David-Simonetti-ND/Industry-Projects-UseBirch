@@ -27,9 +27,12 @@ local_variable_dictionary = "" # TODO : create a dictionary listing all local va
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     internal_trace_json["frame " + str(current_frame_number)] = \
-    {"currentLine" : current_line, "codeNextToRun" : line_next_to_execute, "fileName" : file_name, \
-    "stack" : {"numStackFrames" : current_stack_depth, "topStackFrame" : \
-    {"methodName" : current_func_name, "variables" : local_variable_dictionary } } }
+    {"currentLine" : current_line, \
+    "codeNextToRun" : line_next_to_execute, \
+    "fileName" : file_name, \
+    "stack" : {"numStackFrames" : current_stack_depth, \
+    "topStackFrame" : {"methodName" : current_func_name, \
+    "variables" : local_variable_dictionary } } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
