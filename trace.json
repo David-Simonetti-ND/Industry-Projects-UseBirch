@@ -1,284 +1,212 @@
 {
       "frame 0": {
-            "currentLine": "9",
-            "codeNextToRun": "int a = 5;\\n",
-            "fileName": "example.cpp",
+            "currentLine": "17",
+            "codeNextToRun": "int x = factorial(5);",
+            "fileName": "recursion.cpp",
             "stack": {
                   "numStackFrames": 1,
                   "topStackFrame": {
                         "methodName": "main()",
-                        "variables": ""
+                        "variables": "x = 0 , "
                   }
             }
       },
       "frame 1": {
-            "currentLine": "10",
-            "codeNextToRun": "int addFive = add(a, 5);",
-            "fileName": "example.cpp",
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 2,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "a = 5  addFive = 32767  myDouble = 2.0731389752015378e-317  foo = {-9488 , 32767 , 0 , 0 , 4196576 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 2": {
-            "currentLine": "4",
-            "codeNextToRun": "return a + b;",
-            "fileName": "example.cpp",
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
             "stack": {
                   "numStackFrames": 2,
                   "topStackFrame": {
-                        "methodName": "add()",
+                        "methodName": "factorial()",
                         "variables": "No locals. "
                   }
             }
       },
       "frame 3": {
             "currentLine": "5",
-            "codeNextToRun": "return from add()",
-            "fileName": "example.cpp",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 2,
+                  "numStackFrames": 3,
                   "topStackFrame": {
-                        "methodName": "add()",
+                        "methodName": "factorial()",
                         "variables": "No locals. "
                   }
             }
       },
       "frame 4": {
             "currentLine": "11",
-            "codeNextToRun": "double myDouble = 6;",
-            "fileName": "example.cpp",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 3,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "a = 5  addFive = 10  myDouble = 2.0731389752015378e-317  foo = {-9488 , 32767 , 0 , 0 , 4196576 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 5": {
-            "currentLine": "12",
-            "codeNextToRun": "int foo [5] = { 16, 2, 77, 40, 12071 };",
-            "fileName": "example.cpp",
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 4,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "a = 5  addFive = 10  myDouble = 6  foo = {-9488 , 32767 , 0 , 0 , 4196576 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 6": {
-            "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 4,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 0  a = 5  addFive = 10  myDouble = 6  foo = {16 , 2 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 7": {
-            "currentLine": "14",
-            "codeNextToRun": "foo[i] = foo[i] + 2;",
-            "fileName": "example.cpp",
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 5,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 0  a = 5  addFive = 10  myDouble = 6  foo = {16 , 2 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 8": {
-            "currentLine": "15",
-            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
-            "fileName": "example.cpp",
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 5,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 0  a = 5  addFive = 10  myDouble = 6  foo = {18 , 2 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 9": {
-            "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 6,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 0  a = 5  addFive = 10  myDouble = 6  foo = {18 , 2 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 10": {
-            "currentLine": "14",
-            "codeNextToRun": "foo[i] = foo[i] + 2;",
-            "fileName": "example.cpp",
+            "currentLine": "7",
+            "codeNextToRun": "return 1;",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 6,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 1  a = 5  addFive = 10  myDouble = 6  foo = {18 , 2 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 11": {
-            "currentLine": "15",
-            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
-            "fileName": "example.cpp",
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 6,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 1  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 12": {
             "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 5,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 1  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 13": {
-            "currentLine": "14",
-            "codeNextToRun": "foo[i] = foo[i] + 2;",
-            "fileName": "example.cpp",
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 4,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 2  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 77 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 14": {
-            "currentLine": "15",
-            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
-            "fileName": "example.cpp",
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 3,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 2  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 15": {
             "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
             "stack": {
-                  "numStackFrames": 1,
+                  "numStackFrames": 2,
                   "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 2  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 40 , 12071 }  "
+                        "methodName": "factorial()",
+                        "variables": "No locals. "
                   }
             }
       },
       "frame 16": {
-            "currentLine": "14",
-            "codeNextToRun": "foo[i] = foo[i] + 2;",
-            "fileName": "example.cpp",
+            "currentLine": "18",
+            "codeNextToRun": "std::cout << \\\"Value of 5!: \\\" << x << \\\"\\\\n\\\";",
+            "fileName": "recursion.cpp",
             "stack": {
                   "numStackFrames": 1,
                   "topStackFrame": {
                         "methodName": "main()",
-                        "variables": "i = 3  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 40 , 12071 }  "
+                        "variables": "x = 120  "
                   }
             }
       },
       "frame 17": {
-            "currentLine": "15",
-            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 3  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12071 }  "
-                  }
-            }
-      },
-      "frame 18": {
-            "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 3  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12071 }  "
-                  }
-            }
-      },
-      "frame 19": {
-            "currentLine": "14",
-            "codeNextToRun": "foo[i] = foo[i] + 2;",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 4  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12071 }  "
-                  }
-            }
-      },
-      "frame 20": {
-            "currentLine": "15",
-            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 4  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12073 }  "
-                  }
-            }
-      },
-      "frame 21": {
-            "currentLine": "13",
-            "codeNextToRun": "for (int i = 0; i < 5; ++i) {",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "i = 4  a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12073 }  "
-                  }
-            }
-      },
-      "frame 22": {
-            "currentLine": "17",
-            "codeNextToRun": "return 0;",
-            "fileName": "example.cpp",
-            "stack": {
-                  "numStackFrames": 1,
-                  "topStackFrame": {
-                        "methodName": "main()",
-                        "variables": "a = 5  addFive = 10  myDouble = 6  foo = {18 , 4 , 79 , 42 , 12073 }  "
-                  }
-            }
-      },
-      "frame 23": {
-            "currentLine": "18",
+            "currentLine": "19",
             "codeNextToRun": "return from main()",
-            "fileName": "example.cpp",
+            "fileName": "recursion.cpp",
             "stack": {
                   "numStackFrames": 1,
                   "topStackFrame": {
