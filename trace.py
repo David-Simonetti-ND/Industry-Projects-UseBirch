@@ -41,14 +41,19 @@ def print_frame_json(): # used to debug and print out all the frames currently i
 # Start gdb process
 gdbmi = GdbController()
 # Load binary passed in argv[1] and check we only have one arg
-if len(sys.argv) != 2:
-    print("Please pass in only one argument!")
+if len(sys.argv) < 2:
+    print("Please pass in at least one argument (executable you wish to run)!")
     exit()
+print(" ".join(sys.argv[2:]))
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
-# start running the program and capture the output in response
-response = gdbmi.write('start')
+# write command line arguments if neeeded
+if (len(sys.argv) != 2):
+    # start running the program and capture the output in response
+    response = gdbmi.write("start " + " ".join(sys.argv[2:]))
+else:
+     response = gdbmi.write("start")
 # these lines below break down the output
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
