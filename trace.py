@@ -31,7 +31,7 @@ def append_frame(): # call this function when all the global variables are up to
     {"currentLine" : current_line, \
     "codeNextToRun" : line_next_to_execute, \
     "fileName" : file_name, \
-	"stdout" : current_stdout, \
+    "stdout" : current_stdout, \
     "stack" : {"numStackFrames" : current_stack_depth, \
     "topStackFrame" : {"methodName" : current_func_name, \
     "variables" : local_variable_dictionary } } }
