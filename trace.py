@@ -61,7 +61,12 @@ response = gdbmi.write('info locals') # get info about local vars
 # put it together into one string to be manipulated
 all_main_locals = ""
 for i in range(1, len(response) - 1):
-    all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
+    try:
+        (key, val) = response[i]['payload'].split(' = ', 1) 
+        #pprint("Key: " + key + "Val: " + val)
+    except:
+        continue
+    #all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
 local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
