@@ -60,24 +60,46 @@ else:
 # these lines below break down the output
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
-current_line = response[2]['payload']['bkpt']['line'] # gather which line the program starts on
-strip_index = response[16]['payload'].strip("\\n").find("\\t") # MIGHT BE A BUG IF THE PROGRAM STARTS WITH A FUNCTION CALL
-# the line above and below is just used to strip out tabs from the gdb output
-line_next_to_execute = response[16]['payload'].strip("\\n")[strip_index + 2:].lstrip().rstrip() # gather current line about to be run
+unprocesses_gdb_line = "" # holds lines of interest
+for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
+    if line_of_gdb_output['type'] == 'console': # do something if we find console out
+        unprocesses_gdb_line = line_of_gdb_output['payload'].strip("\\n") # this contains info about the line being executed
+        strip_index = unprocesses_gdb_line.find("\\t") # and try to find a tab
+        if (strip_index == -1): # function call - do nothing
+            continue
+        if "}" in unprocesses_gdb_line and "{" not in unprocesses_gdb_line: # return from function call - act accordingly
+            current_line = unprocesses_gdb_line[:strip_index]
+            line_next_to_execute = "return from " + current_func_name
+            continue
+        # otherwise we got a regular line
+        current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
+        line_next_to_execute = unprocesses_gdb_line[strip_index + 2:].lstrip() # and the line about to be executed
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
 all_main_locals = ""
 for i in range(1, len(response) - 1):
+    if type(response[i]['payload']) == type({}):
+        continue
     all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
 local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
+shouldContinue = True
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
     gdbmi.write('call fflush(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
-    if ("__libc_start_main" in response[3]['payload']): # this checks for when we reach the end
+    for field in response:
+        try:
+            if ("__libc_start_main" in field['payload']):
+                shouldContinue = False
+                break
+        except:
+            continue
+    if (not shouldContinue): # this checks for when we reach the end
         gdbmi.exit()
         break
+    currentLine = ""
+    line_next_to_execute = ""
     unprocesses_gdb_line = "" # holds lines of interest
     for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
         if line_of_gdb_output['type'] == 'console': # do something if we find console out
