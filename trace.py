@@ -39,7 +39,7 @@ def append_frame(): # call this function when all the global variables are up to
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
         pprint(internal_trace_json[frame])
-def define_val_type(i, val):
+def define_val_type( i, val):
     try:
             val = int(val)
     except:
@@ -47,13 +47,16 @@ def define_val_type(i, val):
             val = float(val)
         except:
             if val[0] == ('{'):
-                #tempList = []
-                #val.strip('{', 1)
-                #tempList.append(val)
+                tempList = []
+                val = val.replace("{","",1) # Remove first brace
+                (i, tempVal) = define_val_type(i, val)
+                tempList.append(tempVal)
                 i += 1
-                while response[i]['payload'] != "\\n":
-                    val += response[i]['payload']
+                while response[i]['payload'] != '}':
+                    (i, tempVal) = define_val_type( i, response[i]['payload'].replace(",","",1).strip())
+                    tempList.append(tempVal)
                     i += 1
+                val = tempList
     return i, val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
@@ -89,7 +92,7 @@ for i in range(1, len(response) - 1):
         (key, val) = response[i]['payload'].split(" = ", 1)
     except:
         continue
-    (i, val) = define_val_type(i, val)
+    (i, val) = define_val_type( i, val)
     all_main_locals[key] = val
 pprint(all_main_locals)
 #local_variable_dictionary = all_main_locals
