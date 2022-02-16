@@ -39,6 +39,11 @@ def append_frame(): # call this function when all the global variables are up to
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
         pprint(internal_trace_json[frame])
+punctMap = {
+    '{': '}',
+    '[': ']',
+    '(': ')',
+}
 def define_val_type( i, val): # recursive function used to change strings into typed variables
     try:
             val = int(val)
@@ -46,13 +51,14 @@ def define_val_type( i, val): # recursive function used to change strings into t
         try:
             val = float(val)
         except:
-            if val[0] == ('{'):
+            if val[0] == ('{' or '[' or '('):
+                endPunct = punctMap[val[0]]
                 tempList = []
-                val = val.replace("{","",1) # Remove first brace
+                val = val[1:] # Remove first brace
                 (i, tempVal) = define_val_type(i, val)
                 tempList.append(tempVal)
                 i += 1
-                while response[i]['payload'] != '}':
+                while response[i]['payload'] != endPunct:
                     (i, tempVal) = define_val_type( i, response[i]['payload'].replace(",","",1).strip())
                     tempList.append(tempVal)
                     i += 1
@@ -86,6 +92,7 @@ line_next_to_execute = response[16]['payload'].strip("\\n")[strip_index + 2:].ls
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
+var_output = {}
 all_main_locals = {}
 for i in range(1, len(response) - 1):
     try:
@@ -125,7 +132,7 @@ while True: # infinite loop until we reach the end
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
-    var_output = {}
+    #var_output = {}
     for i in range(1, len(response) - 1):
         try:
                 (key, val) = response[i]['payload'].split(" = ", 1)
@@ -138,7 +145,7 @@ while True: # infinite loop until we reach the end
                 var_output[key] = val
         except:
             continue
-    local_variable_dictionary.update(var_output)
+    local_variable_dictionary = var_output
     print(local_variable_dictionary)
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
