@@ -39,7 +39,7 @@ def append_frame(): # call this function when all the global variables are up to
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
         pprint(internal_trace_json[frame])
-def define_val_type( i, val):
+def define_val_type( i, val): # recursive function used to change strings into typed variables
     try:
             val = int(val)
     except:
