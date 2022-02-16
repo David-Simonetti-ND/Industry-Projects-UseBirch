@@ -51,6 +51,7 @@ print(" ".join(sys.argv[2:]))
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
+gdbmi.write('skip -gfi /usr/include/c++/4.8.2/bits/*.h')
 # write command line arguments if neeeded
 if (len(sys.argv) != 2):
     # start running the program and capture the output in response
@@ -75,6 +76,8 @@ append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
     gdbmi.write('call fflush(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
+    if len(response) < 4:
+        continue
     if ("__libc_start_main" in response[3]['payload']): # this checks for when we reach the end
         gdbmi.exit()
         break
