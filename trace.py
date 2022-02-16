@@ -24,7 +24,7 @@ current_stdout = "" # what the current stdout is
 current_stack_depth = 1 # counts how many recurisve function calls we are currently in - being in main counts as 1, so calling another function will make this 2
 current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
-local_variable_dictionary = "" # TODO : create a dictionary listing all local variables as keys with their value
+local_variable_dictionary = {} # TODO : create a dictionary listing all local variables as keys with their value
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     internal_trace_json["frame " + str(current_frame_number)] = \
@@ -39,6 +39,22 @@ def append_frame(): # call this function when all the global variables are up to
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
         pprint(internal_trace_json[frame])
+def define_val_type(i, val):
+    try:
+            val = int(val)
+    except:
+        try:
+            val = float(val)
+        except:
+            if val[0] == ('{'):
+                #tempList = []
+                #val.strip('{', 1)
+                #tempList.append(val)
+                i += 1
+                while response[i]['payload'] != "\\n":
+                    val += response[i]['payload']
+                    i += 1
+    return i, val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -67,10 +83,16 @@ line_next_to_execute = response[16]['payload'].strip("\\n")[strip_index + 2:].ls
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
-all_main_locals = ""
+all_main_locals = {}
 for i in range(1, len(response) - 1):
-    all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
-local_variable_dictionary = all_main_locals
+    try:
+        (key, val) = response[i]['payload'].split(" = ", 1)
+    except:
+        continue
+    (i, val) = define_val_type(i, val)
+    all_main_locals[key] = val
+pprint(all_main_locals)
+#local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
@@ -99,12 +121,22 @@ while True: # infinite loop until we reach the end
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
-
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
-    var_output = ""
+    var_output = {}
     for i in range(1, len(response) - 1):
-        var_output += (response[i]['payload'].strip("\\n") + " ")
-    local_variable_dictionary = var_output
+        try:
+                (key, val) = response[i]['payload'].split(" = ", 1)
+        except:
+            continue
+        (i, val) = define_val_type(i, val)
+        try:
+            if all_main_locals[key] != val:
+                all_main_locals[key] = val
+                var_output[key] = val
+        except:
+            continue
+    local_variable_dictionary.update(var_output)
+    print(local_variable_dictionary)
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
 # output the trace.json from internal_trace_json
