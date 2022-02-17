@@ -37,8 +37,7 @@ def append_frame(): # call this function when all the global variables are up to
     "variables" : local_variable_dictionary } } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
-    for frame in internal_trace_json.keys():
-        pprint(internal_trace_json[frame])
+    pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -125,6 +124,7 @@ while True: # infinite loop until we reach the end
     local_variable_dictionary = var_output
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
+    print_frame_json()
 # output the trace.json from internal_trace_json
 output.close()
 os.remove("output.txt")
