@@ -108,7 +108,10 @@ while True: # infinite loop until we reach the end
             current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
             line_next_to_execute = unprocesses_gdb_line[strip_index + 2:].lstrip() # and the line about to be executed
     if os.path.getsize("output.txt") > 0: # if condition to read any stdout that was redirected to the output.txt file
-        current_stdout = ''.join(output.readlines())
+        try:
+            current_stdout = ''.join(output.readlines())
+        except:
+            continue
     else:
         current_stdout = ""
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
