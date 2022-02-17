@@ -2,6 +2,7 @@
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os
+
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
