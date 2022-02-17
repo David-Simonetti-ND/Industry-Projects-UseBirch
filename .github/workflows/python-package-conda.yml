@@ -27,6 +27,21 @@ jobs:
     - name: Make test programs
       run: |
         make all
+    - name: Test ex_prog1
+      run: |
+        ./trace.py ex_prog1
+    - name: Test ex_prog2
+      run: |
+        ./trace.py ex_prog2
+    - name: Test example
+      run: |
+        ./trace.py example
+    - name: Test argument_test
+      run: |
+        ./trace.py argument_test
     - name: Test recursion
       run: |
         ./trace.py recursion
+    - name: Test map
+      run: |
+        ./trace.py map
