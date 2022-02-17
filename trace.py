@@ -37,8 +37,7 @@ def append_frame(): # call this function when all the global variables are up to
     "variables" : local_variable_dictionary } } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
-    for frame in internal_trace_json.keys():
-        pprint(internal_trace_json[frame])
+    pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -47,7 +46,6 @@ gdbmi = GdbController()
 if len(sys.argv) < 2:
     print("Please pass in at least one argument (executable you wish to run)!")
     exit()
-print(" ".join(sys.argv[2:]))
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
@@ -80,12 +78,14 @@ response = gdbmi.write('info locals') # get info about local vars
 # put it together into one string to be manipulated
 all_main_locals = ""
 for i in range(1, len(response) - 1):
+    if type(response[i]['payload']) == type({}):
+        continue
     all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
 local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
-    pprint(gdbmi.write('call ((void(*)(int))fflush)(0)')) # flush any stdout that is in the buffer to wherever stdout is directed to
+    gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
         continue
     if ("__libc_start_main" in response[3]['payload']): # this checks for when we reach the end
@@ -106,7 +106,10 @@ while True: # infinite loop until we reach the end
             current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
             line_next_to_execute = unprocesses_gdb_line[strip_index + 2:].lstrip() # and the line about to be executed
     if os.path.getsize("output.txt") > 0: # if condition to read any stdout that was redirected to the output.txt file
-        current_stdout = ''.join(output.readlines())
+        try:
+            current_stdout = ''.join(output.readlines())
+        except:
+            continue
     else:
         current_stdout = ""
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
