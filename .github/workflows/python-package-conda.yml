@@ -33,7 +33,7 @@ jobs:
         cat trace.json
     - name: Test argument_test
       run: |
-        ./trace.py argument_test
+        ./trace.py argument_test a b c d
         cat trace.json
     - name: Test recursion
       run: |
@@ -42,12 +42,4 @@ jobs:
     - name: Test map
       run: |
         ./trace.py map
-        cat trace.json
-    - name: Test ex_prog1
-      run: |
-        ./trace.py ex_prog1
-        cat trace.json
-    - name: Test ex_prog2
-      run: |
-        ./trace.py ex_prog2
         cat trace.json
