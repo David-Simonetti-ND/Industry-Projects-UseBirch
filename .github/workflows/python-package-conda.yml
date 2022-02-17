@@ -20,6 +20,10 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
+    - name: get GDB
+      run: | 
+        sudo apt-get update
+        sudo apt-get install gdb
     - name: Make test programs
       run: |
         make all
