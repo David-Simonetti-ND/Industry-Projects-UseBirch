@@ -1,8 +1,4 @@
-all: master ex_prog1 ex_prog2 automated example argument_test recursion map
-master: master.cpp
-	g++ -std=c++11 -Wall master.cpp -o master
-automated: automated.cpp
-	g++ -std=c++11 -Wall automated.cpp -o automated
+all: ex_prog1 ex_prog2 example argument_test recursion map
 ex_prog1: ex_prog1.cpp
 	g++ -std=c++11 -Wall -ggdb ex_prog1.cpp -o ex_prog1
 ex_prog2: ex_prog2.cpp
@@ -18,4 +14,4 @@ map: map.cpp
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirchEnv/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
 clean: 
-	rm master ex_prog1 ex_prog2 automated example recursion trace.json argument_test map
+	rm ex_prog1 ex_prog2 example recursion trace.json argument_test map
