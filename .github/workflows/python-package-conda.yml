@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.10
     - name: Add conda to system path
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
@@ -24,9 +20,28 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
+    - name: get GDB
+      run: | 
+        sudo apt-get update
+        sudo apt-get install gdb
     - name: Make test programs
       run: |
         make all
+    - name: Test ex_prog1
+      run: |
+        ./trace.py ex_prog1
+    - name: Test ex_prog2
+      run: |
+        ./trace.py ex_prog2
+    - name: Test example
+      run: |
+        ./trace.py example
+    - name: Test argument_test
+      run: |
+        ./trace.py argument_test
     - name: Test recursion
       run: |
         ./trace.py recursion
+    - name: Test map
+      run: |
+        ./trace.py map
