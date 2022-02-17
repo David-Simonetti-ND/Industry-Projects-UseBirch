@@ -2,7 +2,6 @@
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os
-
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -81,12 +80,14 @@ response = gdbmi.write('info locals') # get info about local vars
 # put it together into one string to be manipulated
 all_main_locals = ""
 for i in range(1, len(response) - 1):
+    if type(response[i]['payload']) == type({}):
+        continue
     all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
 local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
-    pprint(gdbmi.write('call ((void(*)(int))fflush)(0)')) # flush any stdout that is in the buffer to wherever stdout is directed to
+    gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
         continue
     if ("__libc_start_main" in response[3]['payload']): # this checks for when we reach the end
