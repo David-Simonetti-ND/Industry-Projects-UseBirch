@@ -35,3 +35,7 @@ jobs:
       run: |
         ./trace.py recursion
         cat trace.json
+    - name: Test argument_test
+      run: |
+        ./trace.py argument_test a b c d
+        cat trace.json
