@@ -42,18 +42,26 @@ def append_frame(): # call this function when all the global variables are up to
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     for frame in internal_trace_json.keys():
         pprint(internal_trace_json[frame])
-punctMap = {
+punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
     '{': '}',
     '[': ']',
     '(': ')',
 }
-def define_val_type( i, val): # recursive function used to change strings into typed variables
+def define_val_type(i, val): # recursive function used to change strings into typed variables
+    # process Booleans
+    if val == 'true':
+            val = bool(True)
+    if val == 'false':
+            val = bool(False)
+    # process Integers
     try:
             val = int(val)
     except:
+    # process Doubles and Floats
         try:
             val = float(val)
         except:
+    # process List-Type variables              
             if val[0] == ('{' or '[' or '('):
                 endPunct = punctMap[val[0]]
                 tempList = []
@@ -65,7 +73,14 @@ def define_val_type( i, val): # recursive function used to change strings into t
                     (i, tempVal) = define_val_type( i, response[i]['payload'].replace(",","",1).strip())
                     tempList.append(tempVal)
                     i += 1
-                val = tempList
+                return i, tempList
+    # process characters
+            for i in range(0, len(val)-1):
+                if val[i] == '\'':
+                    return i, val[i+1]
+                else:
+                    continue
+                
     return i, val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
@@ -95,7 +110,6 @@ line_next_to_execute = response[16]['payload'].strip("\\n")[strip_index + 2:].ls
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
-var_output = {}
 all_main_locals = {}
 for i in range(1, len(response) - 1):
     try:
@@ -104,8 +118,6 @@ for i in range(1, len(response) - 1):
         continue
     (i, val) = define_val_type( i, val)
     all_main_locals[key] = val
-pprint(all_main_locals)
-#local_variable_dictionary = all_main_locals
 append_frame() # create first stack frame
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
@@ -137,7 +149,6 @@ while True: # infinite loop until we reach the end
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
-    var_output = {}
     for i in range(1, len(response) - 1):
         try:
                 (key, val) = response[i]['payload'].split(" = ", 1)
@@ -147,12 +158,9 @@ while True: # infinite loop until we reach the end
         try:
             if all_main_locals[key] != val:
                 all_main_locals[key] = val
-                var_output[key] = val
+                local_variable_dictionary[key] = val
         except:
             continue
-    for key in var_output.keys():
-        local_variable_dictionary[key] = var_output[key]
-    print(local_variable_dictionary)
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
 # output the trace.json from internal_trace_json
