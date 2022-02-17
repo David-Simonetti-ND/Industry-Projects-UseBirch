@@ -2,11 +2,11 @@
 
 int main(int argc, const char *argv[])
 {
-    printf("There are %d arguments to this program\n", argc);
+    std::cout << "There are " << argc << " arguments to this program\n";
     int i = 0;
     for (i = 0; i < argc; i++)
     {
-        printf("Argument %d is: %s\n", i, argv[i]);
+        std::cout << "Argument " << i << " is: " << argv[i] << std::endl;
     }
     return 0;
 }

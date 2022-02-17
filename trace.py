@@ -46,7 +46,6 @@ gdbmi = GdbController()
 if len(sys.argv) < 2:
     print("Please pass in at least one argument (executable you wish to run)!")
     exit()
-print(" ".join(sys.argv[2:]))
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
@@ -124,7 +123,6 @@ while True: # infinite loop until we reach the end
     local_variable_dictionary = var_output
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
-    print_frame_json()
 # output the trace.json from internal_trace_json
 output.close()
 os.remove("output.txt")
