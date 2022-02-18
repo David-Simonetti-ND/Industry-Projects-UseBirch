@@ -46,44 +46,40 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '[': ']',
     '(': ')',
 }
-def define_val_type(i, val): # recursive function used to change strings into typed variables
+def define_val_type(val): # recursive function used to change strings into typed variables
     val = val.strip("\\n")
+    val = val.lstrip()
     # process Booleans
     if val == 'true':
-            val = bool(True)
+        return bool(True)
     if val == 'false':
-            val = bool(False)
+        return bool(False)
     # process Integers
     try:
-            val = int(val)
+        return int(val)
     except:
+        pass
     # process Doubles and Floats
-        try:
-            val = float(val)
-        except:
+    try:
+        return float(val)
+    except:
+        pass
     # process List-Type variables              
-            if '{' in val or '[' in val or '(' in val:
-                tempList = []
-                val = val.lstrip()
-                val = val[1:-1] # Remove first brace
-                splitchar = ","
-                if "}," in val:
-                    val = val.replace("},", "}|")
-                    splitchar = "|"
-                    print(val.replace("},", "}|"))
-                for item in val.split(splitchar):
-                    print(item)
-                    if item == '':
-                        continue
-                    tempList.append(define_val_type(i, item)[1])
-                return i, tempList
-    # process characters
-            for i in range(0, len(val)-1):
-                if val[i] == '\'':
-                    return i, val[i+1]
-                else:
-                    continue
-    return i, val
+    if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
+        end_punct = punctMap[val[0]]
+        tempList = []
+        val = val.lstrip()
+        val = val[1:-1] # Remove first brace
+        splitchar = ","
+        if f"{end_punct}," in val:
+            val = val.replace(f"{end_punct},", f"{end_punct}|")
+            splitchar = "|"
+        for item in val.split(splitchar):
+            if item == '':
+                continue
+            tempList.append(define_val_type(item))
+        return tempList
+    return val.split(" ")[1]
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -128,7 +124,7 @@ for i in range(1, len(response) - 1):
         (key, val) = response[i]['payload'].split(" = ", 1)
     except:
         continue
-    (i, val) = define_val_type( i, val)
+    val = define_val_type(val)
     all_main_locals[key] = val
 append_frame()
 while True: # infinite loop until we reach the end
@@ -169,7 +165,7 @@ while True: # infinite loop until we reach the end
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except:
             continue
-        (i, val) = define_val_type(i, val)
+        val = define_val_type(val)
         try:
             if all_main_locals[key] != val:
                 all_main_locals[key] = val

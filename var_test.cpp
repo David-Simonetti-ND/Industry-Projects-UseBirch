@@ -15,7 +15,8 @@ int main()
     {1,2},
     {3,4},
     };
-    char brace = '{';
+    int threeDFoo[1][1][1] = {{{1}}};
+    char character = 'a';
     bool isDavidSwag = 1;
     // std::vector<int> vect;
     // vect.assign(1,3);
