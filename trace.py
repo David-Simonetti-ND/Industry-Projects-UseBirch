@@ -90,10 +90,10 @@ gdbmi = GdbController()
 if len(sys.argv) < 2:
     print("Please pass in at least one argument (executable you wish to run)!")
     exit()
-print(" ".join(sys.argv[2:]))
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
+gdbmi.write('skip -gfi /usr/include/c++/4.8.2/bits/*.h')
 # write command line arguments if neeeded
 if (len(sys.argv) != 2):
     # start running the program and capture the output in response
@@ -103,10 +103,20 @@ else:
 # these lines below break down the output
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
-current_line = response[2]['payload']['bkpt']['line'] # gather which line the program starts on
-strip_index = response[16]['payload'].strip("\\n").find("\\t") # MIGHT BE A BUG IF THE PROGRAM STARTS WITH A FUNCTION CALL
-# the line above and below is just used to strip out tabs from the gdb output
-line_next_to_execute = response[16]['payload'].strip("\\n")[strip_index + 2:].lstrip().rstrip() # gather current line about to be run
+unprocesses_gdb_line = "" # holds lines of interest
+for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
+    if line_of_gdb_output['type'] == 'console': # do something if we find console out
+        unprocesses_gdb_line = line_of_gdb_output['payload'].strip("\\n") # this contains info about the line being executed
+        strip_index = unprocesses_gdb_line.find("\\t") # and try to find a tab
+        if (strip_index == -1): # function call - do nothing
+            continue
+        if "}" in unprocesses_gdb_line and "{" not in unprocesses_gdb_line: # return from function call - act accordingly
+            current_line = unprocesses_gdb_line[:strip_index]
+            line_next_to_execute = "return from " + current_func_name
+            continue
+        # otherwise we got a regular line
+        current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
+        line_next_to_execute = unprocesses_gdb_line[strip_index + 2:].lstrip() # and the line about to be executed
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
@@ -118,11 +128,11 @@ for i in range(1, len(response) - 1):
         continue
     (i, val) = define_val_type( i, val)
     all_main_locals[key] = val
-append_frame() # create first stack frame
+append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
-    gdbmi.write('call fflush(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
-    if (len(response) < 4):
+    gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
+    if len(response) < 4:
         continue
     if ("__libc_start_main" in response[3]['payload']): # this checks for when we reach the end
         gdbmi.exit()
@@ -142,7 +152,10 @@ while True: # infinite loop until we reach the end
             current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
             line_next_to_execute = unprocesses_gdb_line[strip_index + 2:].lstrip() # and the line about to be executed
     if os.path.getsize("output.txt") > 0: # if condition to read any stdout that was redirected to the output.txt file
-        current_stdout = ''.join(output.readlines())
+        try:
+            current_stdout = ''.join(output.readlines())
+        except:
+            continue
     else:
         current_stdout = ""
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
