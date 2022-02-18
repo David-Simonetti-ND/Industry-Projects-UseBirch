@@ -1,0 +1,240 @@
+{
+      "frame 0": {
+            "currentLine": "17",
+            "codeNextToRun": "int x = factorial(5);",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 1": {
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 2": {
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 3": {
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 3,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 4": {
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 3,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 5": {
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 4,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 6": {
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 4,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 7": {
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 5,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 8": {
+            "currentLine": "11",
+            "codeNextToRun": "return n * factorial(n - 1);",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 5,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 9": {
+            "currentLine": "5",
+            "codeNextToRun": "if ((n == 0) || (n == 1))",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 6,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 10": {
+            "currentLine": "7",
+            "codeNextToRun": "return 1;",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 6,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 11": {
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 6,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 12": {
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 5,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 13": {
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 4,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 14": {
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 3,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 15": {
+            "currentLine": "13",
+            "codeNextToRun": "return from factorial()",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "factorial()",
+                        "variables": {}
+                  }
+            }
+      },
+      "frame 16": {
+            "currentLine": "18",
+            "codeNextToRun": "std::cout << \\\"Value of 5!: \\\" << x << \\\"\\\\n\\\";",
+            "fileName": "recursion.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "x": 120
+                        }
+                  }
+            }
+      },
+      "frame 17": {
+            "currentLine": "19",
+            "codeNextToRun": "return from main()",
+            "fileName": "recursion.cpp",
+            "stdout": "Value of 5!: 120\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "x": 120
+                        }
+                  }
+            }
+      }
+}
