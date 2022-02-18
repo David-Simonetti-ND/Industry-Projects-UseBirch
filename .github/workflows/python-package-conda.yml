@@ -39,3 +39,7 @@ jobs:
       run: |
         ./trace.py argument_test a b c d
         cat trace.json
+    - name: Test var_test
+      run: |
+        ./trace.py var_test 
+        cat trace.json

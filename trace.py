@@ -24,9 +24,12 @@ current_stdout = "" # what the current stdout is
 current_stack_depth = 1 # counts how many recurisve function calls we are currently in - being in main counts as 1, so calling another function will make this 2
 current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
-local_variable_dictionary = "" # TODO : create a dictionary listing all local variables as keys with their value
+local_variable_dictionary = {} # TODO : create a dictionary listing all local variables as keys with their value
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
+    temp_dict = {}
+    for key in local_variable_dictionary:
+        temp_dict[key] = local_variable_dictionary[key]
     internal_trace_json["frame " + str(current_frame_number)] = \
     {"currentLine" : current_line, \
     "codeNextToRun" : line_next_to_execute, \
@@ -34,10 +37,52 @@ def append_frame(): # call this function when all the global variables are up to
     "stdout" : current_stdout, \
     "stack" : {"numStackFrames" : current_stack_depth, \
     "topStackFrame" : {"methodName" : current_func_name, \
-    "variables" : local_variable_dictionary } } }
+    "variables" : temp_dict } } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
+punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
+    '{': '}',
+    '[': ']',
+    '(': ')',
+}
+def define_val_type(val): # recursive function used to change strings into typed variables
+    val = val.strip("\\n")
+    val = val.lstrip()
+    # process Booleans
+    if val == 'true':
+        return bool(True)
+    if val == 'false':
+        return bool(False)
+    # process Integers
+    try:
+        return int(val)
+    except:
+        pass
+    # process Doubles and Floats
+    try:
+        return float(val)
+    except:
+        pass
+    # process List-Type variables              
+    if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
+        end_punct = punctMap[val[0]]
+        tempList = []
+        val = val.lstrip()
+        val = val[1:-1] # Remove first brace
+        splitchar = ","
+        if f"{end_punct}," in val:
+            val = val.replace(f"{end_punct},", f"{end_punct}|")
+            splitchar = "|"
+        for item in val.split(splitchar):
+            if item == '':
+                continue
+            tempList.append(define_val_type(item))
+        return tempList
+    try:
+        return val.split(" ")[1]
+    except:
+        return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -76,13 +121,15 @@ for line_of_gdb_output in response: # loop through output and look for lines whe
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
-all_main_locals = ""
+all_main_locals = {}
 for i in range(1, len(response) - 1):
-    if type(response[i]['payload']) == type({}):
+    try:
+        (key, val) = response[i]['payload'].split(" = ", 1)
+    except:
         continue
-    all_main_locals += (response[i]['payload'].replace("\\n", ",") + " ")
-local_variable_dictionary = all_main_locals
-append_frame() # create first stack frame
+    val = define_val_type(val)
+    all_main_locals[key] = val
+append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
     gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
@@ -115,12 +162,19 @@ while True: # infinite loop until we reach the end
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
-
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
-    var_output = ""
     for i in range(1, len(response) - 1):
-        var_output += (response[i]['payload'].strip("\\n") + " ")
-    local_variable_dictionary = var_output
+        try:
+                (key, val) = response[i]['payload'].split(" = ", 1)
+        except:
+            continue
+        val = define_val_type(val)
+        try:
+            if all_main_locals[key] != val:
+                all_main_locals[key] = val
+                local_variable_dictionary[key] = val
+        except:
+            continue
     append_frame() # create new stack frame
     print(f"Executed line {current_line}")
 # output the trace.json from internal_trace_json
