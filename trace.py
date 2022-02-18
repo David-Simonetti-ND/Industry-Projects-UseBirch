@@ -40,8 +40,7 @@ def append_frame(): # call this function when all the global variables are up to
     "variables" : temp_dict } } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
-    for frame in internal_trace_json.keys():
-        pprint(internal_trace_json[frame])
+    pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
 punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
     '{': '}',
     '[': ']',
