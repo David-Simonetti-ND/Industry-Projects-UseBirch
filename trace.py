@@ -47,6 +47,7 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '(': ')',
 }
 def define_val_type(i, val): # recursive function used to change strings into typed variables
+    val = val.strip("\\n")
     # process Booleans
     if val == 'true':
             val = bool(True)
@@ -61,17 +62,20 @@ def define_val_type(i, val): # recursive function used to change strings into ty
             val = float(val)
         except:
     # process List-Type variables              
-            if val[0] == ('{' or '[' or '('):
-                endPunct = punctMap[val[0]]
+            if '{' in val or '[' in val or '(' in val:
                 tempList = []
-                val = val[1:] # Remove first brace
-                (i, tempVal) = define_val_type(i, val)
-                tempList.append(tempVal)
-                i += 1
-                while response[i]['payload'] != endPunct:
-                    (i, tempVal) = define_val_type( i, response[i]['payload'].replace(",","",1).strip())
-                    tempList.append(tempVal)
-                    i += 1
+                val = val.lstrip()
+                val = val[1:-1] # Remove first brace
+                splitchar = ","
+                if "}," in val:
+                    val = val.replace("},", "}|")
+                    splitchar = "|"
+                    print(val.replace("},", "}|"))
+                for item in val.split(splitchar):
+                    print(item)
+                    if item == '':
+                        continue
+                    tempList.append(define_val_type(i, item)[1])
                 return i, tempList
     # process characters
             for i in range(0, len(val)-1):
@@ -79,7 +83,6 @@ def define_val_type(i, val): # recursive function used to change strings into ty
                     return i, val[i+1]
                 else:
                     continue
-                
     return i, val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
