@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from curses import raw
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os
