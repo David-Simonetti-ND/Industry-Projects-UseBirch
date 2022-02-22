@@ -13,7 +13,7 @@ from pygdbmi.constants import (
     DEFAULT_TIME_TO_CHECK_FOR_ADDITIONAL_OUTPUT_SEC,
 )
 
-DEFAULT_GDB_LAUNCH_COMMAND = ["/escnfs/home/dsimone2/gdb", "--nex", "--quiet", "--interpreter=mi3"]
+DEFAULT_GDB_LAUNCH_COMMAND = ["/escnfs/home/dsimone2/gdb", "--nx", "--quiet", "--interpreter=mi3"]
 logger = logging.getLogger(__name__)
 
 
