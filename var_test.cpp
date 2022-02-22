@@ -26,6 +26,7 @@ int main()
     vect.assign(1,3);
     vect.push_back(5);
     vect.pop_back();
+    std::vector< std::vector<int> > {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     std::map<int, float> map = { {5, 3.14}, {10, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {11, 1.235555}};
     std::map<char, int> map2 = { {'a', 1}, {'b', 3}, {'c', 4} };
     for (int i = 0; i < 5; ++i){
