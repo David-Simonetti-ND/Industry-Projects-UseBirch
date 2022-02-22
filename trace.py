@@ -82,10 +82,7 @@ def define_val_type(val): # recursive function used to change strings into typed
                 continue
             tempList.append(define_val_type(item))
         return tempList
-    try:
-        return val.split(" ")[1]
-    except:
-        return val
+    return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 int add(int a, int b) 
 {
     return a + b;
@@ -17,6 +18,7 @@ int main()
     };
     int threeDFoo[1][1][1] = {{{1}}};
     char character = 'a';
+    char test_cstring[] = "Data Structures\n";
     bool isDavidSwag = 1;
     // std::vector<int> vect;
     // vect.assign(1,3);
