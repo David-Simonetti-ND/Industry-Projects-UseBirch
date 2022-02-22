@@ -51,18 +51,9 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '[': ']',
     '(': ')',
 }
-current_STL_type = ""
-vects_we_have_done = []
 def define_val_type(val, key): # recursive function used to change strings into typed variables
     val = val.strip("\\n")
     val = val.lstrip()
-    if current_STL_type == "Vector":
-        pass
-        print((gdbmi.write(f"pvector {key}")))
-    if "Map" in current_STL_type:
-        pass
-        #print(mapType.group(1), mapType.group(2))
-        print((gdbmi.write(f"pmap {key} {mapType.group(1)} {mapType.group(2)}"))[2])
     # process Booleans
     if val == 'true':
         return bool(True)
@@ -141,26 +132,6 @@ val = ""
 mapType = None
 for i in range(1, len(response) - 1):
     try:
-            #print(response[i]['payload'])
-            if "{" in response[i]['payload'] and "}" not in response[i]['payload'] and (num_left_brac == 0 and num_right_brac == 0):
-                (key, val) = response[i]['payload'].split(" = ", 1)
-                num_left_brac += 1
-                continue
-            if num_left_brac > num_right_brac:
-                if mapType == None:
-                    mapType = re.search(f"      <std::allocator<std::_Rb_tree_node<std::pair<(.*) const, (.*)> > >>", response[i]['payload'], re.IGNORECASE)
-                if "_Vector" in response[i]['payload']:
-                    current_STL_type = "Vector"
-                if "_Rb_tree_node" in response[i]['payload']:
-                    current_STL_type = "Map"
-                num_left_brac += response[i]['payload'].count("{")
-                num_right_brac += response[i]['payload'].count("}")
-                if num_left_brac == num_right_brac and num_left_brac != 0 and num_right_brac != 0:
-                    num_right_brac = 0
-                    num_left_brac = 0
-                    raise TypeError
-                continue
-            current_STL_type = ""
             (key, val) = response[i]['payload'].split(" = ", 1)
     except TypeError:
         pass
@@ -205,32 +176,9 @@ while True: # infinite loop until we reach the end
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
-    num_left_brac = 0
-    num_right_brac = 0
-    key = ""
-    val = ""
     mapType = None
     for i in range(1, len(response) - 1):
         try:
-                if "{" in response[i]['payload'] and "}" not in response[i]['payload'] and (num_left_brac == 0 and num_right_brac == 0):
-                    (key, val) = response[i]['payload'].split(" = ", 1)
-                    num_left_brac += 1
-                    continue
-                if num_left_brac > num_right_brac:
-                    if mapType == None:
-                        mapType = re.search(f"      <std::allocator<std::_Rb_tree_node<std::pair<(.*) const, (.*)> > >>", response[i]['payload'], re.IGNORECASE)
-                    if "_Vector" in response[i]['payload']:
-                        current_STL_type = "Vector"
-                    if "_Rb_tree_node" in response[i]['payload']:
-                        current_STL_type = "Map"
-                    num_left_brac += response[i]['payload'].count("{")
-                    num_right_brac += response[i]['payload'].count("}")
-                    if num_left_brac == num_right_brac and num_left_brac != 0 and num_right_brac != 0:
-                        num_right_brac = 0
-                        num_left_brac = 0
-                        raise TypeError
-                    continue
-                current_STL_type = ""
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except TypeError:
             pass
