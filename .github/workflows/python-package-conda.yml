@@ -20,6 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
         conda create --name testenv
+        conda init
         conda activate myenv
         conda env update --file environment.yml
     - name: get GDB
