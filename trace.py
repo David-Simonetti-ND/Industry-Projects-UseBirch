@@ -201,6 +201,7 @@ while True: # infinite loop until we reach the end
     else:
         current_stdout = ""
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
+    print(raw_stack)
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
