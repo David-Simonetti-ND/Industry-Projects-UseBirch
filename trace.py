@@ -62,7 +62,7 @@ def define_val_type(val, key): # recursive function used to change strings into 
     if "Map" in current_STL_type:
         pass
         #print(mapType.group(1), mapType.group(2))
-        print((gdbmi.write(f"pmap {key} {mapType.group(1)} {mapType.group(2)}")))
+        print((gdbmi.write(f"pmap {key} {mapType.group(1)} {mapType.group(2)}"))[2])
     # process Booleans
     if val == 'true':
         return bool(True)
