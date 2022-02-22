@@ -19,6 +19,7 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
+        conda install --revision 4.10.2
         conda --version
         conda env update --file environment.yml --name base
     - name: get GDB
