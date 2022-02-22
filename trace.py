@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-from typing import Type
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os
-import re
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -51,7 +49,7 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '[': ']',
     '(': ')',
 }
-def define_val_type(val, key): # recursive function used to change strings into typed variables
+def define_val_type(val): # recursive function used to change strings into typed variables
     val = val.strip("\\n")
     val = val.lstrip()
     # process Booleans
@@ -82,7 +80,7 @@ def define_val_type(val, key): # recursive function used to change strings into 
         for item in val.split(splitchar):
             if item == '':
                 continue
-            tempList.append(define_val_type(item, ""))
+            tempList.append(define_val_type(item))
         return tempList
     return val
 # Open file that will hold stdout of gdb
@@ -125,11 +123,6 @@ response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
 all_main_locals = {}
-num_left_brac = 0
-num_right_brac = 0
-key = ""
-val = ""
-mapType = None
 for i in range(1, len(response) - 1):
     try:
             (key, val) = response[i]['payload'].split(" = ", 1)
@@ -137,7 +130,7 @@ for i in range(1, len(response) - 1):
         pass
     except:
         continue
-    val = define_val_type(val, key)
+    val = define_val_type(val)
     all_main_locals[key] = val
 append_frame()
 while True: # infinite loop until we reach the end
@@ -180,12 +173,9 @@ while True: # infinite loop until we reach the end
     for i in range(1, len(response) - 1):
         try:
                 (key, val) = response[i]['payload'].split(" = ", 1)
-        except TypeError:
-            pass
         except:
             continue
-        val = define_val_type(val, key)
-        mapType = None
+        val = define_val_type(val)
         try:
             if all_main_locals[key] != val:
                 all_main_locals[key] = val
