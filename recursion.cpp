@@ -16,4 +16,5 @@ int main()
 {
     int x = factorial(5);
     std::cout << "Value of 5!: " << x << "\n";
+    return 0;
 }
