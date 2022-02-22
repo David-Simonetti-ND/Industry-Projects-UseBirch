@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from curses import raw
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os
@@ -24,7 +25,8 @@ current_stdout = "" # what the current stdout is
 current_stack_depth = 1 # counts how many recurisve function calls we are currently in - being in main counts as 1, so calling another function will make this 2
 current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
-local_variable_dictionary = {} # TODO : create a dictionary listing all local variables as keys with their value
+local_variable_dictionary = {} # create a dictionary listing all local variables as keys with their value
+return_value = None
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     temp_dict = {}
@@ -37,7 +39,9 @@ def append_frame(): # call this function when all the global variables are up to
     "stdout" : current_stdout, \
     "stack" : {"numStackFrames" : current_stack_depth, \
     "topStackFrame" : {"methodName" : current_func_name, \
-    "variables" : temp_dict } } }
+    "variables" : temp_dict },
+    "returnValue" : return_value
+    } }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
@@ -148,6 +152,9 @@ while True: # infinite loop until we reach the end
             if "}" in unprocesses_gdb_line and "{" not in unprocesses_gdb_line: # return from function call - act accordingly
                 current_line = unprocesses_gdb_line[:strip_index]
                 line_next_to_execute = "return from " + current_func_name
+                raw_return = gdbmi.write("print $eax")[1]['payload'].split("=")[1]
+                raw_return = raw_return.lstrip()
+                return_value = raw_return.strip("\\n")
                 continue
             # otherwise we got a regular line
             current_line = unprocesses_gdb_line[:strip_index].rstrip() # get the line number
@@ -161,6 +168,7 @@ while True: # infinite loop until we reach the end
         current_stdout = ""
     raw_stack = gdbmi.write('bt') # this sends the back trace command - basically lists the current function call trace
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
+    pprint(raw_stack)
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
     for i in range(1, len(response) - 1):
@@ -176,6 +184,7 @@ while True: # infinite loop until we reach the end
         except:
             continue
     append_frame() # create new stack frame
+    return_value = None
     print(f"Executed line {current_line}")
 # output the trace.json from internal_trace_json
 output.close()
