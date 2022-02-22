@@ -106,7 +106,7 @@ gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
 gdbmi.write('skip -gfi /usr/include/c++/4.8.2/bits/*.h')
-gdbmi.write('skip -gfi /usr/include/c++/9/bits/*.h")
+gdbmi.write('skip -gfi /usr/include/c++/9/bits/*.h')
 # write command line arguments if neeeded
 if (len(sys.argv) != 2):
     # start running the program and capture the output in response
