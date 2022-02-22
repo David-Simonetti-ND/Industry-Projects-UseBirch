@@ -15,5 +15,6 @@ map: map.cpp
 	g++ -std=c++11 -Wall -ggdb map.cpp -o map
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirchEnv/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
+	cp stl-views-1.0.3.gdb ~/.gdbinit
 clean: 
 	rm ex_prog1 ex_prog2 example recursion trace.json argument_test map var_test

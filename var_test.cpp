@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 int add(int a, int b) 
 {
     return a + b;
@@ -20,10 +21,12 @@ int main()
     char character = 'a';
     char test_cstring[] = "Data Structures\n";
     bool isDavidSwag = 1;
-    // std::vector<int> vect;
-    // vect.assign(1,3);
-    // vect.push_back(5);
-    // vect.pop_back();
+    std::vector<int> vect;
+    vect.assign(1,3);
+    vect.push_back(5);
+    vect.pop_back();
+    std::map<int, float> map = { {5, 3.14}, {10, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {11, 1.235555}};
+    std::map<char, int> map2 = { {'a', 1}, {'b', 3}, {'c', 4} };
     for (int i = 0; i < 5; ++i){
         foo[i] = foo[i] + 2;
         std::cout << "Incremented value!" << std::endl;
