@@ -21,6 +21,7 @@ int main()
     char character = 'a';
     char test_cstring[] = "Data Structures\n";
     bool isDavidSwag = 1;
+    std::string foobar = "Computer Science\n";
     std::vector<int> vect;
     vect.assign(1,3);
     vect.push_back(5);
