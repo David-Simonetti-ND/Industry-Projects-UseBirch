@@ -1,0 +1,1036 @@
+{
+      "frame 0": {
+            "currentLine": "10",
+            "codeNextToRun": "int a = 5;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {}
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 1": {
+            "currentLine": "11",
+            "codeNextToRun": "int addFive = add(a, 5);",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 2": {
+            "currentLine": "5",
+            "codeNextToRun": "return a + b;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "add()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 3": {
+            "currentLine": "6",
+            "codeNextToRun": "return from add()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "add()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": "10"
+            }
+      },
+      "frame 4": {
+            "currentLine": "12",
+            "codeNextToRun": "double myDouble = 6.5;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 5": {
+            "currentLine": "13",
+            "codeNextToRun": "int foo [5] = { 16, 2, 77, 40, 12071 };",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 6": {
+            "currentLine": "17",
+            "codeNextToRun": "return from main()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ]
+                        }
+                  },
+                  "returnValue": "0"
+            }
+      },
+      "frame 7": {
+            "currentLine": "18",
+            "codeNextToRun": "int threeDFoo[1][1][1] = {{{1}}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 8": {
+            "currentLine": "19",
+            "codeNextToRun": "char character = 'a';",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 9": {
+            "currentLine": "20",
+            "codeNextToRun": "bool isDavidSwag = 1;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'"
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 10": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 11": {
+            "currentLine": "26",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 12": {
+            "currentLine": "27",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 13": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 14": {
+            "currentLine": "26",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 15": {
+            "currentLine": "27",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 16": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 17": {
+            "currentLine": "26",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 18": {
+            "currentLine": "27",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 19": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 20": {
+            "currentLine": "26",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 21": {
+            "currentLine": "27",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 22": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 23": {
+            "currentLine": "26",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 24": {
+            "currentLine": "27",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 25": {
+            "currentLine": "25",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 26": {
+            "currentLine": "29",
+            "codeNextToRun": "return 0;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 27": {
+            "currentLine": "30",
+            "codeNextToRun": "return from main()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "'a'",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": "0"
+            }
+      }
+}
