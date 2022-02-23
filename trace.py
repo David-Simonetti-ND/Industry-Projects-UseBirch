@@ -101,7 +101,7 @@ def define_val_type(val): # recursive function used to change strings into typed
         try: 
             val = val.split('\'')[1]
         except:
-            continue
+            pass
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
