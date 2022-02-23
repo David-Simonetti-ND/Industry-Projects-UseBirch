@@ -654,6 +654,12 @@
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
                               ]
                         }
                   },
@@ -709,6 +715,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -773,6 +785,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -847,6 +865,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -917,6 +941,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -991,6 +1021,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1061,6 +1097,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1135,6 +1177,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1205,6 +1253,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1279,6 +1333,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1349,6 +1409,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1423,6 +1489,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1493,6 +1565,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1567,6 +1645,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1637,6 +1721,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1711,6 +1801,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1781,6 +1877,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1855,6 +1957,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -1925,6 +2033,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
@@ -1999,6 +2113,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -2071,6 +2191,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -2093,6 +2219,84 @@
             }
       },
       "frame 38": {
+            "currentLine": "29",
+            "codeNextToRun": "std::vector< std::vector<int> > {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 39": {
             "currentLine": "25",
             "codeNextToRun": "std::vector<int> vect;",
             "fileName": "var_test.cpp",
@@ -2143,6 +2347,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -2164,7 +2374,7 @@
                   "returnValue": null
             }
       },
-      "frame 39": {
+      "frame 40": {
             "currentLine": "36",
             "codeNextToRun": "return 0;",
             "fileName": "var_test.cpp",
@@ -2215,6 +2425,12 @@
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
                                     "<No data fields>"
                               ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
                               "map": [
                                     "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
                                     "<No data fields>}",
@@ -2236,7 +2452,7 @@
                   "returnValue": null
             }
       },
-      "frame 40": {
+      "frame 41": {
             "currentLine": "37",
             "codeNextToRun": "return from main()",
             "fileName": "var_test.cpp",
@@ -2285,6 +2501,12 @@
                                     "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
                                     "<No data fields>}",
                                     "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
                                     "<No data fields>"
                               ],
                               "map": [
