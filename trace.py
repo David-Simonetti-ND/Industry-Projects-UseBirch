@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
-import time, sys, json, os
+import time, sys, json, os, ast
 import re
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
@@ -27,6 +27,57 @@ current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
 local_variable_dictionary = {} # create a dictionary listing all local variables as keys with their value
 return_value = None
+def check_vector(val):
+    new_vector_string = ''
+    closing_counter = 0
+    test_case = True
+    iter1 = 0
+    test_break = 0
+    
+    if '{' not in val or '}' not in val:
+        val = []
+        return val
+
+    while iter1 < len(val):
+        test_break = 0
+        if val[iter1] == '{':
+            new_vector_string += '['
+            iter2 = iter1 + 1
+            while test_case:
+                if val[iter2] == '{':
+                    closing_counter += 1
+                    val = val[iter2:]
+                    iter1 = 0
+                    test_break = -1
+                    break
+                elif val[iter2] == '}':
+                    for i in range(iter1 + 1, iter2):
+                        new_vector_string += val[i]
+                    new_vector_string += ']'
+                    val = val[iter2:]
+                    iter1 = 0
+                    test_break = -1
+                    break
+                iter2 += 1
+        if test_break == 0:
+            iter1 += 1
+    
+    for i in range(0, closing_counter):
+        new_vector_string += ']'
+
+    new_vector_string = [char for char in new_vector_string]
+
+    for i in range(0, len(new_vector_string) - 1):
+        if new_vector_string[i] == ']' and new_vector_string[i + 1] == '[':
+            new_vector_string.insert(i + 1,',')
+    
+    new_vector_string = ''.join(new_vector_string)
+        
+    try:
+        new_vector_string = ast.literal_eval(new_vector_string)
+        return new_vector_string
+    except:
+        return []
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     temp_dict = {}
@@ -96,7 +147,10 @@ def define_val_type(val): # recursive function used to change strings into typed
                 continue
             tempList.append(define_val_type(item))
         return tempList
-    #process char
+    # process vectors
+    if 'std::vector' in val:
+        return check_vector(val)
+      
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
     return val

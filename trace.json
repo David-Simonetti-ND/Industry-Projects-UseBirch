@@ -1,0 +1,2533 @@
+{
+      "frame 0": {
+            "currentLine": "12",
+            "codeNextToRun": "int a = 5;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {}
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 1": {
+            "currentLine": "13",
+            "codeNextToRun": "int addFive = add(a, 5);",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 2": {
+            "currentLine": "7",
+            "codeNextToRun": "return a + b;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "add()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 3": {
+            "currentLine": "8",
+            "codeNextToRun": "return from add()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 2,
+                  "topStackFrame": {
+                        "methodName": "add()",
+                        "variables": {
+                              "a": 5
+                        }
+                  },
+                  "returnValue": "10"
+            }
+      },
+      "frame 4": {
+            "currentLine": "14",
+            "codeNextToRun": "double myDouble = 6.5;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 5": {
+            "currentLine": "15",
+            "codeNextToRun": "int foo [5] = { 16, 2, 77, 40, 12071 };",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 6": {
+            "currentLine": "19",
+            "codeNextToRun": "return from main()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ]
+                        }
+                  },
+                  "returnValue": "0"
+            }
+      },
+      "frame 7": {
+            "currentLine": "20",
+            "codeNextToRun": "int threeDFoo[1][1][1] = {{{1}}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 8": {
+            "currentLine": "21",
+            "codeNextToRun": "char character = 'a';",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 9": {
+            "currentLine": "22",
+            "codeNextToRun": "char test_cstring[] = \\\"Data Structures\\\\n\\\";",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'"
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 10": {
+            "currentLine": "23",
+            "codeNextToRun": "bool isDavidSwag = 1;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\""
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 11": {
+            "currentLine": "24",
+            "codeNextToRun": "std::string foobar = \\\"Computer Science\\\\n\\\";",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 12": {
+            "currentLine": "25",
+            "codeNextToRun": "std::vector<int> vect;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 13": {
+            "currentLine": "26",
+            "codeNextToRun": "vect.assign(1,3);",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x0, _M_finish = 0x0, _M_end_of_storage = 0x0}}",
+                                    "<No data fields>"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 14": {
+            "currentLine": "27",
+            "codeNextToRun": "vect.push_back(5);",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b050, _M_finish = 0x60b054, _M_end_of_storage = 0x60b054}}",
+                                    "<No data fields>"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 15": {
+            "currentLine": "28",
+            "codeNextToRun": "vect.pop_back();",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b078, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 16": {
+            "currentLine": "29",
+            "codeNextToRun": "std::vector< std::vector<int> > {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 17": {
+            "currentLine": "30",
+            "codeNextToRun": "std::map<int, float> map = { {5, 3.14}, {10, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {11, 1.235555}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 18": {
+            "currentLine": "31",
+            "codeNextToRun": "std::map<char, int> map2 = { {'a', 1}, {'b', 3}, {'c', 4} };",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 19": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 20": {
+            "currentLine": "33",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    16,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 21": {
+            "currentLine": "34",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 22": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 23": {
+            "currentLine": "33",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    2,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 24": {
+            "currentLine": "34",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 25": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 26": {
+            "currentLine": "33",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    77,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 27": {
+            "currentLine": "34",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 28": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 29": {
+            "currentLine": "33",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    40,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 30": {
+            "currentLine": "34",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 31": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 32": {
+            "currentLine": "33",
+            "codeNextToRun": "foo[i] = foo[i] + 2;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12071
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 33": {
+            "currentLine": "34",
+            "codeNextToRun": "std::cout << \\\"Incremented value!\\\" << std::endl;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 34": {
+            "currentLine": "32",
+            "codeNextToRun": "for (int i = 0; i < 5; ++i){",
+            "fileName": "var_test.cpp",
+            "stdout": "Incremented value!\n",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 35": {
+            "currentLine": "36",
+            "codeNextToRun": "return 0;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 36": {
+            "currentLine": "31",
+            "codeNextToRun": "std::map<char, int> map2 = { {'a', 1}, {'b', 3}, {'c', 4} };",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 37": {
+            "currentLine": "30",
+            "codeNextToRun": "std::map<int, float> map = { {5, 3.14}, {10, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {11, 1.235555}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 38": {
+            "currentLine": "29",
+            "codeNextToRun": "std::vector< std::vector<int> > {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 39": {
+            "currentLine": "25",
+            "codeNextToRun": "std::vector<int> vect;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 40": {
+            "currentLine": "36",
+            "codeNextToRun": "return 0;",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": null
+            }
+      },
+      "frame 41": {
+            "currentLine": "37",
+            "codeNextToRun": "return from main()",
+            "fileName": "var_test.cpp",
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "a": 5,
+                              "addFive": 10,
+                              "myDouble": 6.5,
+                              "foo": [
+                                    18,
+                                    4,
+                                    79,
+                                    42,
+                                    12073
+                              ],
+                              "twoDFoo": [
+                                    [
+                                          1,
+                                          2
+                                    ],
+                                    [
+                                          3,
+                                          4
+                                    ]
+                              ],
+                              "threeDFoo": [
+                                    [
+                                          [
+                                                1
+                                          ]
+                                    ]
+                              ],
+                              "character": "97 'a'",
+                              "test_cstring": "\"Data Structures\\\\n\\\"",
+                              "isDavidSwag": true,
+                              "foobar": [
+                                    "static npos = <optimized out>, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_p = 0x60b028 \\\"Computer Science\\\\n\\\"}"
+                              ],
+                              "vect": [
+                                    "<std::_Vector_base<int, std::allocator<int> >> = {_M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b070, _M_finish = 0x60b074, _M_end_of_storage = 0x60b078}}",
+                                    "<No data fields>"
+                              ],
+                              "v1": [
+                                    "<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {_M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_start = 0x60b0d0, _M_finish = 0x60b118, _M_end_of_storage = 0x60b118}}",
+                                    "<No data fields>"
+                              ],
+                              "map": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<int const, float> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<int, int, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b1e0, _M_left = 0x60b180, _M_right = 0x60b240}",
+                                    "_M_node_count = 5}}"
+                              ],
+                              "map2": [
+                                    "_M_t = {_M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, int> > >> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_key_compare = {<std::binary_function<char, char, bool>> = {<No data fields>}",
+                                    "<No data fields>}",
+                                    "_M_header = {_M_color = std::_S_red, _M_parent = 0x60b2a0, _M_left = 0x60b270, _M_right = 0x60b2d0}",
+                                    "_M_node_count = 3}}"
+                              ]
+                        }
+                  },
+                  "returnValue": "0"
+            }
+      }
+}
