@@ -85,25 +85,27 @@ def define_val_type(val): # recursive function used to change strings into typed
     # process vectors
     if 'std::vector' in val:
         new_vector_string = ''
-        brackets_list = ['{', '}']
         closing_counter = 0
         iter1 = 0
-        while iter1 < len(val):
-            if val[iter1] == '{' and (val[iter1 + 1:iter1 + 22] == 'std::vector of length'):
-                new_vector_string += '['
-                closing_counter += 1
-            elif (val[iter1] == '{' and (val[iter1 + 1:iter1 + 22] != 'std::vector of length')):
-                iter2 = iter1 + 1
-                new_vector_string += '['
-                while val[iter2] != '}':
-                    new_vector_string += val[iter2]
-                    iter2 += 1
+        try:
+            while iter1 < len(val):
+                if val[iter1] == '{' and (val[iter1 + 1:iter1 + 22] == 'std::vector of length'):
+                    new_vector_string += '['
+                    closing_counter += 1
+                elif (val[iter1] == '{' and (val[iter1 + 1:iter1 + 22] != 'std::vector of length')):
+                    iter2 = iter1 + 1
+                    new_vector_string += '['
+                    while val[iter2] != '}':
+                        new_vector_string += val[iter2]
+                        iter2 += 1
+                    new_vector_string += ']'
+                    iter1 = iter2 + 1
+                else:
+                    iter1 += 1
+            for i in range(0, closing_counter):
                 new_vector_string += ']'
-                iter1 = iter2 + 1
-            else:
-                iter1 += 1
-        for i in range(0, closing_counter):
-            new_vector_string += ']'
+        except:
+            pass
         if not new_vector_string:
             val = []
             return val
