@@ -167,6 +167,7 @@ while True: # infinite loop until we reach the end
     current_func_name = raw_stack[1]['payload'].split(" ")[2] + "()" # get the current name of the function we are in
     current_stack_depth = len(raw_stack) - 2 # and calculate how many function calls deep we are based on the length of the response
     response = gdbmi.write('info locals') # get info about local vars - similar to how it was done above
+    pprint(response)
     for i in range(1, len(response) - 1):
         try:
                 (key, val) = response[i]['payload'].split(" = ", 1)
