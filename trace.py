@@ -128,7 +128,7 @@ def define_val_type(val): # recursive function used to change strings into typed
             return val
         items = val.split(',')
         for item in items:
-            (key, value) = item.split(" = ")
+            (key, value) = item.split(" = ", 1)
             key = key.split('[')[1].split(']')[0]
             map[define_val_type(key)] = define_val_type(value)
         return map
@@ -147,6 +147,7 @@ def define_val_type(val): # recursive function used to change strings into typed
                 continue
             tempList.append(define_val_type(item))
         return tempList
+
     # process vectors
     if 'std::vector' in val:
         return check_vector(val)
