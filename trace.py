@@ -135,7 +135,7 @@ def define_val_type(val): # recursive function used to change strings into typed
         return tempList
     # process vectors
     if 'std::vector' in val:
-        check_vector(val)
+        return check_vector(val)
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
