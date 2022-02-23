@@ -67,7 +67,7 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
-    # process maps
+    # process mapsgit 
     if "std::map" in val:
         print("MAP!")
         #val = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
