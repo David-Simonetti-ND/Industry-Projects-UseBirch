@@ -94,8 +94,11 @@ def define_val_type(val): # recursive function used to change strings into typed
                     new_vector_string += ']'
                 else:
                     new_vector_string += val[iter]
-        if type(ast.literal_eval(new_vector_string)) == list:
+        try:
             val = ast.literal_eval(new_vector_string)
+            return val
+        except:
+            pass
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
