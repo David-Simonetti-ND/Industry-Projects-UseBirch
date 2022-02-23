@@ -93,13 +93,13 @@ def define_val_type(val): # recursive function used to change strings into typed
                 new_vector_string += '['
                 closing_counter += 1
             elif (val[iter] == '{' and (val[iter + 1:iter + 22] != 'std::vector of length')):
-                    iter_2 = iter + 1
-                    new_vector_string += '['
-                    while val[iter2] != '}':
-                        new_vector_string += val[iter2]
-                        iter2 += 1
-                    new_vector_string += ']'
-            iter = iter2 + 1
+                iter_2 = iter + 1
+                new_vector_string += '['
+                while val[iter2] != '}':
+                    new_vector_string += val[iter2]
+                    iter2 += 1
+                new_vector_string += ']'
+                iter = iter2 + 1
         for i in range(0, closing_counter):
             new_vector_string += ']'
         if not new_vector_string:
