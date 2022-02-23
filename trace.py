@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
-import time, sys, json, os
+import time, sys, json, os, ast
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -94,7 +94,7 @@ def define_val_type(val): # recursive function used to change strings into typed
                     new_vector_string += ']'
                 else:
                     new_vector_string += val[iter]
-        val = new_vector_string
+        val = ast.literal_eval(new_vector_string)
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
