@@ -83,17 +83,25 @@ def define_val_type(val): # recursive function used to change strings into typed
             tempList.append(define_val_type(item))
         return tempList
     # process vectors
-    new_vector_string = ''
-    brackets_list = ['{', '}']
     if 'std::vector' in val:
-        for iter in range(0, len(val)):
-            if (val[iter].isdigit() and (not val[iter - 2].isalpha())) or (val[iter] in brackets_list) or (val[iter] == ',' and (not val[iter -3].isalpha())):
-                if val[iter] == brackets_list[0]:
+        new_vector_string = ''
+        brackets_list = ['{', '}']
+        closing_counter = 0
+        iter = 0
+        while iter < len(val):
+            if (val[iter] == '{' and val[iter + 1:iter + 22] == 'std::vector of length'):
+                new_vector_string += '['
+                closing_counter += 1
+            elif (val[iter] == '{' and (val[iter + 1:iter + 22] != 'std::vector of length')):
+                    iter_2 = iter + 1
                     new_vector_string += '['
-                elif val[iter] == brackets_list[1]:
+                    while val[iter2] != '}':
+                        new_vector_string += val[iter2]
+                        iter2 += 1
                     new_vector_string += ']'
-                else:
-                    new_vector_string += val[iter]
+            iter = iter2 + 1
+        for i in range(0, closing_counter):
+            new_vector_string += ']'
         if not new_vector_string:
             val = []
             return val
