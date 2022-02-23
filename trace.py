@@ -79,7 +79,7 @@ def define_val_type(val): # recursive function used to change strings into typed
             (key, value) = item.split(" = ")
             key = key.split('[')[1].split(']')[0]
             key = define_val_type(key)
-            map[key] = define_val_type(value)
+            map[define_val_type(key)] = define_val_type(value)
         return map
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
@@ -95,6 +95,9 @@ def define_val_type(val): # recursive function used to change strings into typed
             if item == '':
                 continue
             tempList.append(define_val_type(item))
+        #process char
+        if re.match(r"(\d)* '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
+            val = val.split('\'')[1]
         return tempList
     return val
 # Open file that will hold stdout of gdb
