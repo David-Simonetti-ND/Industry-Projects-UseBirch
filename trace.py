@@ -69,8 +69,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         pass
     # process mapsgit 
     if "std::map" in val:
-        print("MAP!")
-        #val = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        #print("MAP!")
+        val = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
