@@ -97,8 +97,11 @@ def define_val_type(val): # recursive function used to change strings into typed
             tempList.append(define_val_type(item))
         return tempList
     #process char
-    #if re.match(r"(\d)* '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
-        #val = val.split('\'')[1]
+    if re.match(r"(\d)* '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
+        try: 
+            val = val.split('\'')[1]
+        except:
+            print(val)
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
