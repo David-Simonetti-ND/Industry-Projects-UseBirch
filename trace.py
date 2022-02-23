@@ -2,7 +2,7 @@
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os, ast
-
+import re
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -119,6 +119,19 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
+    # process mapsgit 
+    if "std::map" in val:
+        map = {}
+        try: 
+            val = val.split('{')[1].split('}')[0]
+        except:
+            return val
+        items = val.split(',')
+        for item in items:
+            (key, value) = item.split(" = ")
+            key = key.split('[')[1].split(']')[0]
+            map[define_val_type(key)] = define_val_type(value)
+        return map
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
@@ -137,6 +150,9 @@ def define_val_type(val): # recursive function used to change strings into typed
     # process vectors
     if 'std::vector' in val:
         return check_vector(val)
+      
+    if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
+            val = val.split('\'')[1]
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
