@@ -82,6 +82,14 @@ def define_val_type(val): # recursive function used to change strings into typed
                 continue
             tempList.append(define_val_type(item))
         return tempList
+    # process vectors
+    new_vector_string = ''
+    brackets_list = ['{', '}']
+    if 'std::vector' in val:
+        for iter in range(0, len(val)):
+            if (val[iter].isdigit() and (not val[iter - 2].isalpha())) or (val[iter] in brackets_list):
+                new_vector_string += val[iter]
+        val = new_vector_string
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
