@@ -26,6 +26,7 @@ jobs:
       run: | 
         sudo apt-get update
         sudo apt-get install gdb
+        gdb --version
     - name: Make test programs
       run: |
         make all
