@@ -69,8 +69,16 @@ def define_val_type(val): # recursive function used to change strings into typed
         pass
     # process mapsgit 
     if "std::map" in val:
-        #print("MAP!")
-        val = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        print("MAP!")
+        map = {}
+        val = val.split('{')[1].split('}')[0]
+        items = val.split(',')
+        for item in items:
+            for key, value in items.split(" = "):
+                key = key.split('[')[1].split(']')[0]
+                map[define_val_type(key)] = define_val_type(value)
+        return map
+        #val = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
