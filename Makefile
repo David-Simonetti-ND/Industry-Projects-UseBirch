@@ -1,4 +1,4 @@
-all: ex_prog1 ex_prog2 example argument_test recursion map var_test
+all: ex_prog1 ex_prog2 example argument_test recursion map_test var_test
 ex_prog1: ex_prog1.cpp
 	g++ -std=c++11 -Wall -ggdb ex_prog1.cpp -o ex_prog1
 ex_prog2: ex_prog2.cpp
