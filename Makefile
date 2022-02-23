@@ -11,8 +11,8 @@ recursion: recursion.cpp
 	g++ -std=c++11 -Wall -ggdb recursion.cpp -o recursion
 argument_test: argument_test.cpp
 	g++ -std=c++11 -Wall -ggdb argument_test.cpp -o argument_test
-map: map.cpp
-	g++ -std=c++11 -Wall -ggdb map.cpp -o map
+map_test: map_test.cpp
+	g++ -std=c++11 -Wall -ggdb map_test.cpp -o map_test
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirchEnv/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
 clean: 
