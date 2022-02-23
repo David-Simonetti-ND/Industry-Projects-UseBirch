@@ -94,6 +94,9 @@ def define_val_type(val): # recursive function used to change strings into typed
                     new_vector_string += ']'
                 else:
                     new_vector_string += val[iter]
+        if not new_vector_string:
+            val = []
+            return val
         try:
             val = ast.literal_eval(new_vector_string)
             return val
