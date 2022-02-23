@@ -87,8 +87,13 @@ def define_val_type(val): # recursive function used to change strings into typed
     brackets_list = ['{', '}']
     if 'std::vector' in val:
         for iter in range(0, len(val)):
-            if (val[iter].isdigit() and (not val[iter - 2].isalpha())) or (val[iter] in brackets_list):
-                new_vector_string += val[iter]
+            if (val[iter].isdigit() and (not val[iter - 2].isalpha())) or (val[iter] in brackets_list) or (val[iter] == ',' and (not val[iter -3].isalpha())):
+                if val[iter] == brackets_list[0]:
+                    new_vector_string += '['
+                elif val[iter] == brackets_list[1]:
+                    new_vector_string += '['
+                else:
+                    new_vector_string += val[iter]
         val = new_vector_string
     return val
 # Open file that will hold stdout of gdb
