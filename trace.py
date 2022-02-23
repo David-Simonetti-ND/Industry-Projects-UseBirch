@@ -67,10 +67,6 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
-    # process Maps
-    #if "std::map" in val:
-        #print("MAP")
-        #return "XXXXXXXXXXXXXXXXXX THIS IS A MAP XXXXXXXXXXXXXXXXXX"
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
