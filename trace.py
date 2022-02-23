@@ -91,7 +91,7 @@ def define_val_type(val): # recursive function used to change strings into typed
                 if val[iter] == brackets_list[0]:
                     new_vector_string += '['
                 elif val[iter] == brackets_list[1]:
-                    new_vector_string += '['
+                    new_vector_string += ']'
                 else:
                     new_vector_string += val[iter]
         val = new_vector_string
