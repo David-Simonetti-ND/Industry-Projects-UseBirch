@@ -152,7 +152,10 @@ def define_val_type(val): # recursive function used to change strings into typed
 
     # process vectors
     if 'std::vector' in val:
-        val = val.split('=', 1)[1]
+        try:
+            val = val.split('=', 1)[1]
+        except:
+            print(val)
         val = define_val_type(val)
         return val
         #return check_vector(val)
