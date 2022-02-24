@@ -27,6 +27,7 @@ current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
 local_variable_dictionary = {} # create a dictionary listing all local variables as keys with their value
 return_value = None
+args = {}
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     temp_dict = {}
@@ -41,7 +42,9 @@ def append_frame(): # call this function when all the global variables are up to
     "topStackFrame" : {"methodName" : current_func_name, \
     "variables" : temp_dict },
     "returnValue" : return_value
-    } }
+        },
+    "args" : args
+    }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
@@ -100,6 +103,7 @@ def define_val_type(val): # recursive function used to change strings into typed
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
     return val
+
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -120,6 +124,7 @@ if (len(sys.argv) != 2):
 else:
      response = gdbmi.write("start >> output.txt")
 # these lines below break down the output
+
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
 unprocesses_gdb_line = "" # holds lines of interest
@@ -150,6 +155,14 @@ for i in range(1, len(response) - 1):
 append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
+    try:
+        response_args = response[-1]['payload']['frame']['args']
+    except:
+        pass
+
+    for arg in response_args:
+        args[arg['name']] = arg['value']
+
     gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
         continue
@@ -198,6 +211,7 @@ while True: # infinite loop until we reach the end
             continue
     append_frame() # create new stack frame
     return_value = None
+    args = {}
     print(f"Executed line {current_line}")
 # output the trace.json from internal_trace_json
 output.close()
