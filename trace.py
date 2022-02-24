@@ -164,7 +164,6 @@ def define_val_type(val): # recursive function used to change strings into typed
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
 
-    val.strip("\\")
     return val
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
