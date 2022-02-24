@@ -102,13 +102,13 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '(': ')',
 }
 def define_val_type(val): # recursive function used to change strings into typed variables
-    if len(val) == 0:
-        return val
     try:
         val = val.strip("\\n")
     except:
         pass
     val = val.lstrip()
+    if len(val) == 0:
+        return val
     # process Booleans
     if val == 'true':
         return bool(True)
