@@ -129,9 +129,9 @@ def define_val_type(val): # recursive function used to change strings into typed
             return val
         items = val.split(',')
         for item in items:
-            (key, value) = item.split(" = ", 1)
+            (key, value) = item.split("] = ", 1)
             try:
-                key = key.split('[')[1].split(']')[0]
+                key = key.split('[')[1]
             except:
                 return val
             map[define_val_type(key)] = define_val_type(value)
