@@ -128,7 +128,7 @@ def define_val_type(val): # recursive function used to change strings into typed
             val = val.split('[',1)[1]
         except:
             return val
-        items = val.split(', [')
+        items = val.split(", [")
         for item in items:
             (key, value) = item.split("] = ", 1)
             #try:
