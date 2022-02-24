@@ -48,9 +48,31 @@ def check_vector(val):
         for i in range(0, len(new_vector_string) - 1):
             if new_vector_string[i] == ']' and new_vector_string[i + 1] == '[':
                 new_vector_string.insert(i + 1,',')
+            if new_vector_string[i] == '"':
+                new_vector_string[i] = "'"
+            if new_vector_string[i] == '\\':
+                new_vector_string[i] = ''
+
+
+        count_chars = len(''.join(new_vector_string).split(','))
+        check_count_chars = 0
+        char_str = ''
+        for i in range(0, len(new_vector_string) - 2):
+            if new_vector_string[i] == "'" and new_vector_string[i + 2] == "'":
+                check_count_chars += 1
+        if count_chars == check_count_chars:
+            for i in range(0, len(new_vector_string)):
+                if new_vector_string[i] == '[' or new_vector_string[i] == ']':
+                    char_str += new_vector_string[i]
+                if new_vector_string[i] == "'" and new_vector_string[i - 2] == "'" and new_vector_string[i + 1] != ']':
+                    char_str += "'" + new_vector_string[i - 1] + "'" + ','
+                elif new_vector_string[i] == "'" and new_vector_string[i - 2] == "'" and new_vector_string[i + 1] == ']':
+                   char_str += "'" + new_vector_string[i - 1] + "'" 
         
+            new_vector_string = char_str
+                
         new_vector_string = ''.join(new_vector_string)
-            
+
         try:
             new_vector_string = ast.literal_eval(new_vector_string)
             return new_vector_string
@@ -59,13 +81,13 @@ def check_vector(val):
 
 s1 = "std::vector of length 0, capacity 0"
 s2 = "std::vector of length 4, capacity 4 = {'a', 'b', 'c', 'd'}"
-s3 = "std::vector of length 3, capacity 3 = {std::vector of length 3, capacity 3 = {1, 2, 3}, std::vector of length 3, capacity 3 = {4, 5, 6}, std::vector of length 3, capacity 3 = {7, 8, 9}}"
+s3 = "std::vector of length 3, capacity 3 = {std::vector of length 3, capacity 3 = {1, 2, 3}, std::vector of length 3, capacity 3 = {4.748, 5.5, 6.2}, std::vector of length 3, capacity 3 = {7, 8, 9}}"
 s4 = "std::vector of length 178956558, capacity 173351935 = {<error reading variable vectorSquared (Cannot access memory at address 0x7fff00000003)>"
 s5 = "std::vector of length 4, capacity 4 = {97 'a', 98 'b', 99 'c', 100 'd'}"
-s6 = "std::vector of length 2, capacity 2 = {\\\"Hello\\\", \\\"Goodbye\\\"}"
+s6 = "std::vector of length 2, capacity 2 = {\\\"H\\\", \\\"Goodbye\\\"}"
 s7 = "std::vector of length 1, capacity 1 = {std::vector of length 3, capacity 3 = {\\\"Hi\\\", \\\"Some\\\", \\\"DHSIJFDSBGBGUFGEWFB\\\"}}"
 s8 = "std::vector of length 2, capacity 2 = {'Hello', 'Goodbye'}"
 s9 = "std::vector of length 2, capacity 2 = {3, 5}"
 s10 = "std::vector of length 2, capacity 2 = {\\\"\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\020 VUUU\\\\000\\\\000\\\\034AWUUU\\\\000\\\\000\\\\060AWUUU\\\\000\\\\000<AWUUU\\\\000\\\\000<AWUUU\\\\000\\\\000PAWUUU\\\\000\\\\000TAWUUU\\\\000\\\\000TAWUUU\\\\000\\\\000!\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\260>WUUU\\\\000\\\\000\\\\020 VUUU\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000!\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\020AWUUU\\\\000\\\\000\\\\020 VUUU\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000!\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\060AWUUU\\\\000\\\\000\\\\020 VUUU\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\000\\\\241\\\\356\\\", '\\\\000' <repeats 30 times>..., \\\"Goodbye\\\"}"
 s11 = "std::vector of length 1, capacity 1 = {std::vector of length 2932031011331, capacity 2932031011331 = {<error reading variable v1 (Cannot access memory at address 0x0)>"
-print(check_vector(s8))
+print(check_vector(s3))

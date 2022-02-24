@@ -33,7 +33,7 @@ def check_vector(val):
     iter1 = 0
     test_break = 0
     brackets_list = ['{', '}']
-        
+    
     if not all(x in val for x in brackets_list):
         val = []
         return val
@@ -70,9 +70,31 @@ def check_vector(val):
     for i in range(0, len(new_vector_string) - 1):
         if new_vector_string[i] == ']' and new_vector_string[i + 1] == '[':
             new_vector_string.insert(i + 1,',')
+        if new_vector_string[i] == '"':
+            new_vector_string[i] = "'"
+        if new_vector_string[i] == '\\':
+            new_vector_string[i] = ''
+
+
+    count_chars = len(''.join(new_vector_string).split(','))
+    check_count_chars = 0
+    char_str = ''
+    for i in range(0, len(new_vector_string) - 2):
+        if new_vector_string[i] == "'" and new_vector_string[i + 2] == "'":
+            check_count_chars += 1
+    if count_chars == check_count_chars:
+        for i in range(0, len(new_vector_string)):
+            if new_vector_string[i] == '[' or new_vector_string[i] == ']':
+                char_str += new_vector_string[i]
+            if new_vector_string[i] == "'" and new_vector_string[i - 2] == "'" and new_vector_string[i + 1] != ']':
+                char_str += "'" + new_vector_string[i - 1] + "'" + ','
+            elif new_vector_string[i] == "'" and new_vector_string[i - 2] == "'" and new_vector_string[i + 1] == ']':
+                char_str += "'" + new_vector_string[i - 1] + "'" 
     
+        new_vector_string = char_str
+            
     new_vector_string = ''.join(new_vector_string)
-        
+
     try:
         new_vector_string = ast.literal_eval(new_vector_string)
         return new_vector_string
