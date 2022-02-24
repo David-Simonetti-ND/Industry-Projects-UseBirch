@@ -175,7 +175,7 @@ if (len(sys.argv) != 2):
     # start running the program and capture the output in response
     response = gdbmi.write("start " + " ".join(sys.argv[2:]) + " >> output.txt")
 else:
-     response = gdbmi.write("start >> output.txt")
+    response = gdbmi.write("start >> output.txt")
 # these lines below break down the output
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
