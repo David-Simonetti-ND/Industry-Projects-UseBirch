@@ -44,20 +44,23 @@ def check_vector(val):
             new_vector_string += '['
             iter2 = iter1 + 1
             while test_case:
-                if val[iter2] == '{':
-                    closing_counter += 1
-                    val = val[iter2:]
-                    iter1 = 0
-                    test_break = -1
-                    break
-                elif val[iter2] == '}':
-                    for i in range(iter1 + 1, iter2):
-                        new_vector_string += val[i]
-                    new_vector_string += ']'
-                    val = val[iter2:]
-                    iter1 = 0
-                    test_break = -1
-                    break
+                try:
+                    if val[iter2] == '{':
+                        closing_counter += 1
+                        val = val[iter2:]
+                        iter1 = 0
+                        test_break = -1
+                        break
+                    elif val[iter2] == '}':
+                        for i in range(iter1 + 1, iter2):
+                            new_vector_string += val[i]
+                        new_vector_string += ']'
+                        val = val[iter2:]
+                        iter1 = 0
+                        test_break = -1
+                        break
+                except:
+                    print(val)
                 iter2 += 1
         if test_break == 0:
             iter1 += 1
