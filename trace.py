@@ -102,7 +102,10 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '(': ')',
 }
 def define_val_type(val): # recursive function used to change strings into typed variables
-    val = val.strip("\\n")
+    try:
+        val = val.strip("\\n")
+    except:
+        pass
     val = val.lstrip()
     # process Booleans
     if val == 'true':
@@ -149,13 +152,10 @@ def define_val_type(val): # recursive function used to change strings into typed
 
     # process vectors
     if 'std::vector' in val:
-        print(val)
-        #try:
-            #val = val.split('=', 1)[1]
-        #except:
-            #return val
-        #val = define_val_type(val)
-        #return val
+        val = val.split('=', 1)[1]
+        val = define_val_type(val)
+        return val
+        #return check_vector(val)
       
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
