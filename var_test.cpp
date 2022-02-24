@@ -15,8 +15,7 @@ int main()
     int foo [5] = { 16, 2, 77, 40, 12071 };
     int twoDFoo [2][2] = {
     {1,2},
-    {3,4},
-    };
+    {3,4}, };
     int threeDFoo[1][1][1] = {{{1}}};
     char character = 'a';
     char test_cstring[] = "Data Structures\n";
