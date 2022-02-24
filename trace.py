@@ -279,6 +279,9 @@ while True: # infinite loop until we reach the end
     append_frame() # create new stack frame
     return_value = None
     print(f"Executed line {current_line}")
+    if "return" in line_next_to_execute and "main" in current_func_name:
+        gdbmi.exit()
+        break
 # output the trace.json from internal_trace_json
 output.close()
 os.remove("output.txt")
