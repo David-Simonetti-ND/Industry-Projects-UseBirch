@@ -151,15 +151,15 @@ def define_val_type(val): # recursive function used to change strings into typed
 
     # process vectors
     if "std::vector" and '=' in val:
-        print(val)
-        try:
-            val = val.split('=', 1)[1]
-        except:
-            print(val)
-            return val
-        val = define_val_type(val)
-        return val
-        #return check_vector(val)
+        #print(val)
+        #try:
+            #val = val.split('=', 1)[1]
+        #except:
+            #print(val)
+            #return val
+        #val = define_val_type(val)
+        #return val
+        return check_vector(val)
       
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
