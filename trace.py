@@ -129,9 +129,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         except:
             return val
         items = val.split(', [')
-        return items
         for item in items:
-            (key, value) = item.split("] = ")
+            (key, value) = item.split("] = ", 1)
             #try:
                 #key = key.split(']')[0]
             #except:
