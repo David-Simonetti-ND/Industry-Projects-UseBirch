@@ -12,7 +12,7 @@ def check_vector(val):
         iter1 = 0
         test_break = 0
         
-        if '{' not in val or '}' not in val:
+        if (not ('{' in val)) and (not ('}' in val)):
             val = []
             return val
 
@@ -59,5 +59,6 @@ def check_vector(val):
 
 s1 = "std::vector of length 0, capacity 0"
 s2 = "std::vector of length 4, capacity 4 = {'a', 'b', 'c', 'd'}"
+s3 = "std::vector of length 3, capacity 3 = {std::vector of length 3, capacity 3 = {1, 2, 3}, std::vector of length 3, capacity 3 = {4, 5, 6}, std::vector of length 3, capacity 3 = {7, 8, 9}}"
 
-print(check_vector(s2))
+print(check_vector(s1))
