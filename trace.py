@@ -121,7 +121,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         pass
     # process mapsgit 
     if "std::map" in val:
-        map = {}
+        #map = {}
+        itemlist = []
         print(val)
         #try: 
             #val = val.split('{',1)[1].split('}',1)[0]
@@ -129,14 +130,18 @@ def define_val_type(val): # recursive function used to change strings into typed
         #except:
             #return val
         items = val.split(", [")
+        items[0].strip('{[',1)
+        items[-1].rstrip('}',1)
         for item in items:
-            (key, value) = item.split("] = ", 1)
+            itemlist.append(item)
+            #(key, value) = item.split("] = ", 1)
             #try:
                 #key = key.split(']')[0]
             #except:
                 #return val
-            map[define_val_type(key)] = define_val_type(value)
-        return map
+            #map[define_val_type(key)] = define_val_type(value)
+        #return map
+        return itemlist
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
