@@ -123,11 +123,11 @@ def define_val_type(val): # recursive function used to change strings into typed
     if "std::map" in val:
         map = {}
         print(val)
-        try: 
-            val = val.split('{',1)[1].split('}',1)[0]
-            val = val.split('[',1)[1]
-        except:
-            return val
+        #try: 
+            #val = val.split('{',1)[1].split('}',1)[0]
+            #val = val.split('[',1)[1]
+        #except:
+            #return val
         items = val.split(", [")
         for item in items:
             (key, value) = item.split("] = ", 1)
