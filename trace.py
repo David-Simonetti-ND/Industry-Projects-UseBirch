@@ -119,29 +119,18 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
-    # process mapsgit 
+    # process maps 
     if "std::map" in val:
-        #map = {}
-        itemlist = []
-        print(val)
-        #try: 
-            #val = val.split('{',1)[1].split('}',1)[0]
-            #val = val.split('[',1)[1]
-        #except:
-            #return val
+        map = {}
+        try: 
+            val = val.split("{[",1)[1].rstrip('}')
+        except:
+            return val
         items = val.split(", [")
-        #items[0].split('{[',1)[1]
-        #items[-1].rstrip('}',1)
         for item in items:
-            itemlist.append(item)
-            #(key, value) = item.split("] = ", 1)
-            #try:
-                #key = key.split(']')[0]
-            #except:
-                #return val
-            #map[define_val_type(key)] = define_val_type(value)
-        #return map
-        return itemlist
+            (key, value) = item.split("] = ", 1)
+            map[define_val_type(key)] = define_val_type(value)
+        return map
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
@@ -160,7 +149,6 @@ def define_val_type(val): # recursive function used to change strings into typed
 
     # process vectors
     if 'std::vector' in val:
-        print(val)
         return check_vector(val)
       
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
