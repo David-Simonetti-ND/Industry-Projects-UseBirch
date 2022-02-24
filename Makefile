@@ -17,5 +17,6 @@ vector_test: vector_test.cpp
 	g++ -std=c++11 -Wall -ggdb vector_test.cpp -o vector_test
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirchEnv/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
+	cp .gdbpoint ~/.gdbinit
 clean: 
 	rm ex_prog1 ex_prog2 example recursion trace.json argument_test map var_test
