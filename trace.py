@@ -30,7 +30,6 @@ return_value = None
 def check_vector(val):
     new_vector_string = ''
     closing_counter = 0
-    test_case = True
     iter1 = 0
     test_break = 0
     brackets_list = ['{', '}']
@@ -44,7 +43,7 @@ def check_vector(val):
         if val[iter1] == '{':
             new_vector_string += '['
             iter2 = iter1 + 1
-            while test_case:
+            while iter2 < len(val):
                 if val[iter2] == '{':
                     closing_counter += 1
                     val = val[iter2:]
