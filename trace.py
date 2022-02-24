@@ -34,7 +34,7 @@ def check_vector(val):
     iter1 = 0
     test_break = 0
     
-    if '{' not in val or '}' not in val:
+    if not (('{' in val)) or (not ('{' in val)):
         val = []
         return val
 
@@ -150,18 +150,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         return tempList
 
     # process vectors
-    if "std::vector" and '=' in val:
-        #print(val)
-        #try:
-            #val = val.split('=', 1)[1]
-        #except:
-            #print(val)
-            #return val
-        #val = define_val_type(val)
-        #return val
-        if "error reading variable" in val:
-            return []
-        return check_vector(val)
+    #if "std::vector":
+       # return check_vector(val)
       
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
