@@ -46,3 +46,11 @@ jobs:
       run: |
         ./trace.py var_test 
         cat trace.json
+    - name: Test map_test
+      run: |
+        ./trace.py map_test
+        cat trace.json
+    - name: Test vector_test
+      run: |
+        ./trace.py vector_test
+        cat trace.json
