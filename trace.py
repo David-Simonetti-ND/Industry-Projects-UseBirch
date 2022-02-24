@@ -156,6 +156,7 @@ def define_val_type(val): # recursive function used to change strings into typed
             val = val.split('=', 1)[1]
         except:
             print(val)
+            return val
         val = define_val_type(val)
         return val
         #return check_vector(val)
