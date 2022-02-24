@@ -130,8 +130,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         #except:
             #return val
         items = val.split(", [")
-        items[0].strip('{[',1)
-        items[-1].rstrip('}',1)
+        #items[0].strip('{[',1)
+        #items[-1].rstrip('}',1)
         for item in items:
             itemlist.append(item)
             #(key, value) = item.split("] = ", 1)
