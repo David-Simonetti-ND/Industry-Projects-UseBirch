@@ -162,6 +162,8 @@ def define_val_type(val): # recursive function used to change strings into typed
             #return val
         #val = define_val_type(val)
         #return val
+        if "error reading variable" in val:
+            return []
         return check_vector(val)
       
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
