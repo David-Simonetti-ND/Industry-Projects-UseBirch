@@ -80,7 +80,7 @@ def check_vector(val):
     count_chars = len(''.join(new_vector_string).split(',')) - count_commas_between # to see how many characters we are dealing with which are seperated by commas
     check_count_chars = 0 # counter to check whether we will actually find all the characters
     char_str = '' # string that will hold the answer
-    for i in range(0, len(new_vector_string)): # for loop to count the number of chracters we have
+    for i in range(0, len(new_vector_string) - 2): # for loop to count the number of chracters we have
         if new_vector_string[i] == "'" and new_vector_string[i + 2] == "'":
             check_count_chars += 1
     if count_chars == check_count_chars: # check if we found all the characters 
