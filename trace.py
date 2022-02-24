@@ -130,10 +130,10 @@ def define_val_type(val): # recursive function used to change strings into typed
         items = val.split(', [')
         for item in items:
             (key, value) = item.split("] = ")
-            try:
-                key = key.split('[')[1]
-            except:
-                return val
+            #try:
+                #key = key.split(']')[0]
+            #except:
+                #return val
             map[define_val_type(key)] = define_val_type(value)
         return map
     # process List-Type variables              
