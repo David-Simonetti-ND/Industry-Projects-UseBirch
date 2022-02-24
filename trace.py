@@ -33,8 +33,9 @@ def check_vector(val):
     test_case = True
     iter1 = 0
     test_break = 0
-    
-    if (not ('{' in val)) and (not ('}' in val)):
+    brackets_list = ['{', '}']
+        
+    if not all(x in val for x in brackets_list):
         val = []
         return val
 

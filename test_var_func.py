@@ -11,8 +11,9 @@ def check_vector(val):
         test_case = True
         iter1 = 0
         test_break = 0
+        brackets_list = ['{', '}']
         
-        if (not ('{' in val)) and (not ('}' in val)):
+        if not all(x in val for x in brackets_list):
             val = []
             return val
 
@@ -57,7 +58,7 @@ def check_vector(val):
         except:
             return []
 
-s1 = "std::vector of length 0, capacity 0"
+s1 = "std::vector of length 0, capacity 0 ="
 s2 = "std::vector of length 4, capacity 4 = {'a', 'b', 'c', 'd'}"
 s3 = "std::vector of length 3, capacity 3 = {std::vector of length 3, capacity 3 = {1, 2, 3}, std::vector of length 3, capacity 3 = {4, 5, 6}, std::vector of length 3, capacity 3 = {7, 8, 9}}"
 
