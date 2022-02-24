@@ -13,4 +13,5 @@ int main(){
     std::vector<std::vector<int> > vectorSquared = {{1,2,3}, {4,5,6}, intVect};
     intVect.push_back(5);
     intVect.pop_back();
+    return 0;
 }
