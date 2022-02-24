@@ -230,7 +230,6 @@ for i in range(1, len(response) - 1):
 append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
-    print(response)
     gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
         continue
