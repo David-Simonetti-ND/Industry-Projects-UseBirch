@@ -148,7 +148,8 @@ def define_val_type(val): # recursive function used to change strings into typed
         return tempList
 
     # process vectors
-    #if 'std::vector' in val:
+    if 'std::vector' in val:
+        print(val)
         #try:
             #val = val.split('=', 1)[1]
         #except:
