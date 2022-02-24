@@ -34,7 +34,7 @@ def check_vector(val):
     iter1 = 0
     test_break = 0
     
-    if not (('{' in val)) or (not ('{' in val)):
+    if (not ('{'in val)) and (not ('}' in val)):
         val = []
         return val
 
