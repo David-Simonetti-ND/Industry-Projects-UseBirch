@@ -27,6 +27,8 @@ current_func_name = "" # name of the function we are currently in
 line_next_to_execute = "" # line of c/c++ code that will be executed in the next step
 local_variable_dictionary = {} # create a dictionary listing all local variables as keys with their value
 return_value = None
+args = {}
+command_line_args = []
 def check_vector(val):
     new_vector_string = '' # this holds the string which will later be turned into a list and returned to the user. It is what usebirch wants to be displayed
     closing_counter = 0 # counts how many closing brackets we need depending on the dimension of the vector
@@ -112,12 +114,15 @@ def append_frame(): # call this function when all the global variables are up to
     {"currentLine" : current_line, \
     "codeNextToRun" : line_next_to_execute, \
     "fileName" : file_name, \
+    "commandLineArgs" : command_line_args, \
     "stdout" : current_stdout, \
     "stack" : {"numStackFrames" : current_stack_depth, \
     "topStackFrame" : {"methodName" : current_func_name, \
     "variables" : temp_dict },
     "returnValue" : return_value
-    } }
+        },
+    "args" : args
+    }
     current_frame_number += 1
 def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
     pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
@@ -182,6 +187,7 @@ def define_val_type(val): # recursive function used to change strings into typed
             val = val.split('\'')[1]
 
     return val
+
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
 # Start gdb process
@@ -202,8 +208,19 @@ if (len(sys.argv) != 2):
 else:
     response = gdbmi.write("start >> output.txt")
 # these lines below break down the output
+
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
+
+command_line_arg_response = gdbmi.write('print *argv@argc')
+
+if "No symbol" not in command_line_arg_response[1]['payload'] and len(command_line_arg_response[1]['payload'].split(',')) != 1:
+    arg_list = command_line_arg_response[1]['payload'].split()[5::2]
+    arg_list[-1] = arg_list[-1][:-1:]
+
+    for arg in arg_list:
+        command_line_args.append(''.join(filter(str.isalnum, arg)))
+
 unprocesses_gdb_line = "" # holds lines of interest
 for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
     if line_of_gdb_output['type'] == 'console': # do something if we find console out
@@ -232,6 +249,14 @@ for i in range(1, len(response) - 1):
 append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
+    
+    try:
+        response_args = response[-1]['payload']['frame']['args']
+        for arg in response_args:
+                args[arg['name']] = arg['value']
+    except:
+        pass
+
     gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
         continue
@@ -280,6 +305,7 @@ while True: # infinite loop until we reach the end
             continue
     append_frame() # create new stack frame
     return_value = None
+    args = {}
     print(f"Executed line {current_line}")
     if "return" in line_next_to_execute and "main" in current_func_name:
         gdbmi.exit()
