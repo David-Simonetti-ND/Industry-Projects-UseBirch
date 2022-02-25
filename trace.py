@@ -127,7 +127,7 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '(': ')',
 }
 def define_val_type(val): # recursive function used to change strings into typed variables
-    val = val.strip("\\n")
+    val = val.strip("\\n").strip("\"").strip("\\")
     val = val.lstrip()
     if len(val) == 0:
         return val
@@ -150,7 +150,7 @@ def define_val_type(val): # recursive function used to change strings into typed
     if "std::map" in val:
         map = {}
         try: 
-            val = val.split("{[",1)[1].rstrip('}')
+            val = val.split("{[",1)[1][0:-1]
         except:
             return val
         items = val.split(", [")
