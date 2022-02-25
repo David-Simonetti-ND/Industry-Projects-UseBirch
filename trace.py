@@ -131,11 +131,13 @@ current_func_name = response[2]['payload']['bkpt']['func'] # gather current func
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
 
 command_line_arg_response = gdbmi.write('print *argv@argc')
-arg_list = command_line_arg_response[1]['payload'].split()[5::2]
-arg_list[-1] = arg_list[-1][:-1:]
 
-for arg in arg_list:
-    command_line_args.append(''.join(filter(str.isalnum, arg)))
+if "No symbol" not in command_line_arg_response[1]['payload'] and len(command_line_arg_response[1]['payload'].split(',')) != 1:
+    arg_list = command_line_arg_response[1]['payload'].split()[5::2]
+    arg_list[-1] = arg_list[-1][:-1:]
+
+    for arg in arg_list:
+        command_line_args.append(''.join(filter(str.isalnum, arg)))
 
 unprocesses_gdb_line = "" # holds lines of interest
 for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
