@@ -28,6 +28,7 @@ line_next_to_execute = "" # line of c/c++ code that will be executed in the next
 local_variable_dictionary = {} # create a dictionary listing all local variables as keys with their value
 return_value = None
 args = {}
+command_line_args = []
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     temp_dict = {}
@@ -37,6 +38,7 @@ def append_frame(): # call this function when all the global variables are up to
     {"currentLine" : current_line, \
     "codeNextToRun" : line_next_to_execute, \
     "fileName" : file_name, \
+    "commandLineArgs" : command_line_args, \
     "stdout" : current_stdout, \
     "stack" : {"numStackFrames" : current_stack_depth, \
     "topStackFrame" : {"methodName" : current_func_name, \
@@ -127,6 +129,14 @@ else:
 
 current_func_name = response[2]['payload']['bkpt']['func'] # gather current function name (should be main but why not be safe)
 file_name = response[2]['payload']['bkpt']['file'] # gather file name
+
+command_line_arg_response = gdbmi.write('print *argv@argc')
+arg_list = command_line_arg_response[1]['payload'].split()[5::2]
+arg_list[-1] = arg_list[-1][:-1:]
+
+for arg in arg_list:
+    command_line_args.append(''.join(filter(str.isalnum, arg)))
+
 unprocesses_gdb_line = "" # holds lines of interest
 for line_of_gdb_output in response: # loop through output and look for lines where gdb sends something to the console
     if line_of_gdb_output['type'] == 'console': # do something if we find console out
@@ -155,13 +165,13 @@ for i in range(1, len(response) - 1):
 append_frame()
 while True: # infinite loop until we reach the end
     response = gdbmi.write('step') # send GDB to execute one line
+    
     try:
         response_args = response[-1]['payload']['frame']['args']
+        for arg in response_args:
+                args[arg['name']] = arg['value']
     except:
         pass
-
-    for arg in response_args:
-        args[arg['name']] = arg['value']
 
     gdbmi.write('call ((void(*)(int))fflush)(0)') # flush any stdout that is in the buffer to wherever stdout is directed to
     if len(response) < 4:
