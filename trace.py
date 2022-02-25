@@ -86,7 +86,7 @@ def check_vector(val):
     if count_chars == check_count_chars: # check if we found all the characters 
         for i in range(0, len(new_vector_string)):
             if new_vector_string[i] == ',' and new_vector_string[i - 1]  == ']' and new_vector_string[i + 1] == '[':
-                char += new_vector_string[i]
+                char_str += new_vector_string[i]
             if new_vector_string[i] == '[' or new_vector_string[i] == ']': # we need to add all the braces
                 char_str += new_vector_string[i]
             if new_vector_string[i] == "'" and new_vector_string[i - 2] == "'" and new_vector_string[i + 1] != ']': # add the characters + the comma if we didn't reach the end
