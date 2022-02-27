@@ -32,25 +32,25 @@ jobs:
         make all
     - name: Test example
       run: |
-        ./trace.py example
+        ./trace.py bin/example
         cat trace.json
     - name: Test recursion
       run: |
-        ./trace.py recursion
+        ./trace.py bin/recursion
         cat trace.json
     - name: Test argument_test
       run: |
-        ./trace.py argument_test a b c d
+        ./trace.py bin/argument_test a b c d
         cat trace.json
     - name: Test var_test
       run: |
-        ./trace.py var_test 
+        ./trace.py bin/var_test 
         cat trace.json
     - name: Test map_test
       run: |
-        ./trace.py map_test
+        ./trace.py bin/map_test
         cat trace.json
     - name: Test vector_test
       run: |
-        ./trace.py vector_test
+        ./trace.py bin/vector_test
         cat trace.json
