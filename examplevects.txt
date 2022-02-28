@@ -1,5 +1,0 @@
-intVect = std::vector of length -624064, capacity 2 = {-3}
-charVect = std::vector of length 5, capacity 8 = {97 'a', 98 'b', 99 'c', 100 'd', 101 'e'}
-stringVect = std::vector of length 2, capacity 2 = {"Hello", "Goodbye"}
-v1 = std::vector of length 1, capacity 1 = {std::vector of length 3, capacity 3 = {"Hi", "Some", "DHSIJFDSBGBGUFGEWFB"}}
-vectorSquared = std::vector of length -3, capacity 3 = {std::vector of length 3, capacity 3 = {-1, 2, -3}, std::vector of length 3, capacity 3 = {4, 5, 6}, std::vector of length 1, capacity 1 = {3}}
