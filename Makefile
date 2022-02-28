@@ -3,6 +3,7 @@ BIN = bin
 PARSING = parsing
 all: argument_test example map_test recursion var_test vector_test parse
 argument_test: $(SRC)/argument_test.cpp
+	mkdir bin
 	g++ -std=c++11 -Wall -ggdb $(SRC)/argument_test.cpp -o $(BIN)/argument_test
 example: $(SRC)/example.cpp
 	g++ -std=c++11 -Wall -ggdb $(SRC)/example.cpp -o $(BIN)/example
