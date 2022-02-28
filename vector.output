@@ -1,0 +1,267 @@
+Terminals unused in grammar
+
+   NUM
+   '}'
+
+
+Grammar
+
+    0 $accept: input $end
+
+    1 input: line
+
+    2 $@1: %empty
+
+    3 line: 'N' $@1 vector line
+    4     | %empty
+
+    5 $@2: %empty
+
+    6 vector: 'V' '[' $@2 vect_contents ']'
+
+    7 vect_contents: var
+    8              | vector
+
+    9 $@3: %empty
+
+   10 vect_contents: vect_contents ',' $@3 vect_contents
+
+   11 var: int
+   12    | string
+
+   13 int: 'F'
+
+   14 string: 'S'
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+',' (44) 10
+'F' (70) 13
+'N' (78) 3
+'S' (83) 14
+'V' (86) 6
+'[' (91) 6
+']' (93) 6
+'}' (125)
+error (256)
+NUM (258)
+
+
+Nonterminals, with rules where they appear
+
+$accept (12)
+    on left: 0
+input (13)
+    on left: 1, on right: 0
+line (14)
+    on left: 3 4, on right: 1 3
+$@1 (15)
+    on left: 2, on right: 3
+vector (16)
+    on left: 6, on right: 3 8
+$@2 (17)
+    on left: 5, on right: 6
+vect_contents (18)
+    on left: 7 8 10, on right: 6 10
+$@3 (19)
+    on left: 9, on right: 10
+var (20)
+    on left: 11 12, on right: 7
+int (21)
+    on left: 13, on right: 11
+string (22)
+    on left: 14, on right: 12
+
+
+State 0
+
+    0 $accept: . input $end
+
+    'N'  shift, and go to state 1
+
+    $default  reduce using rule 4 (line)
+
+    input  go to state 2
+    line   go to state 3
+
+
+State 1
+
+    3 line: 'N' . $@1 vector line
+
+    $default  reduce using rule 2 ($@1)
+
+    $@1  go to state 4
+
+
+State 2
+
+    0 $accept: input . $end
+
+    $end  shift, and go to state 5
+
+
+State 3
+
+    1 input: line .
+
+    $default  reduce using rule 1 (input)
+
+
+State 4
+
+    3 line: 'N' $@1 . vector line
+
+    'V'  shift, and go to state 6
+
+    vector  go to state 7
+
+
+State 5
+
+    0 $accept: input $end .
+
+    $default  accept
+
+
+State 6
+
+    6 vector: 'V' . '[' $@2 vect_contents ']'
+
+    '['  shift, and go to state 8
+
+
+State 7
+
+    3 line: 'N' $@1 vector . line
+
+    'N'  shift, and go to state 1
+
+    $default  reduce using rule 4 (line)
+
+    line  go to state 9
+
+
+State 8
+
+    6 vector: 'V' '[' . $@2 vect_contents ']'
+
+    $default  reduce using rule 5 ($@2)
+
+    $@2  go to state 10
+
+
+State 9
+
+    3 line: 'N' $@1 vector line .
+
+    $default  reduce using rule 3 (line)
+
+
+State 10
+
+    6 vector: 'V' '[' $@2 . vect_contents ']'
+
+    'V'  shift, and go to state 6
+    'F'  shift, and go to state 11
+    'S'  shift, and go to state 12
+
+    vector         go to state 13
+    vect_contents  go to state 14
+    var            go to state 15
+    int            go to state 16
+    string         go to state 17
+
+
+State 11
+
+   13 int: 'F' .
+
+    $default  reduce using rule 13 (int)
+
+
+State 12
+
+   14 string: 'S' .
+
+    $default  reduce using rule 14 (string)
+
+
+State 13
+
+    8 vect_contents: vector .
+
+    $default  reduce using rule 8 (vect_contents)
+
+
+State 14
+
+    6 vector: 'V' '[' $@2 vect_contents . ']'
+   10 vect_contents: vect_contents . ',' $@3 vect_contents
+
+    ','  shift, and go to state 18
+    ']'  shift, and go to state 19
+
+
+State 15
+
+    7 vect_contents: var .
+
+    $default  reduce using rule 7 (vect_contents)
+
+
+State 16
+
+   11 var: int .
+
+    $default  reduce using rule 11 (var)
+
+
+State 17
+
+   12 var: string .
+
+    $default  reduce using rule 12 (var)
+
+
+State 18
+
+   10 vect_contents: vect_contents ',' . $@3 vect_contents
+
+    $default  reduce using rule 9 ($@3)
+
+    $@3  go to state 20
+
+
+State 19
+
+    6 vector: 'V' '[' $@2 vect_contents ']' .
+
+    $default  reduce using rule 6 (vector)
+
+
+State 20
+
+   10 vect_contents: vect_contents ',' $@3 . vect_contents
+
+    'V'  shift, and go to state 6
+    'F'  shift, and go to state 11
+    'S'  shift, and go to state 12
+
+    vector         go to state 13
+    vect_contents  go to state 21
+    var            go to state 15
+    int            go to state 16
+    string         go to state 17
+
+
+State 21
+
+   10 vect_contents: vect_contents . ',' $@3 vect_contents
+   10              | vect_contents ',' $@3 vect_contents .
+
+    ','  shift, and go to state 18
+
+    $default  reduce using rule 10 (vect_contents)

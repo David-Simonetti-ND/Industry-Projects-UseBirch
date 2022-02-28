@@ -3,6 +3,7 @@ from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os, ast
 import re
+import subprocess
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -30,6 +31,13 @@ return_value = None
 args = {}
 command_line_args = []
 def check_vector(val):
+    parse_in = open('myinput.in', 'w')
+    parse_in.write(f"v = {val}\n")
+    parse_in.close()
+    parse_in = open('myinput.in', 'r')
+    print(val)
+    p = subprocess.Popen('parsing/parse', stdin=parse_in)
+    p.wait()
     new_vector_string = '' # this holds the string which will later be turned into a list and returned to the user. It is what usebirch wants to be displayed
     closing_counter = 0 # counts how many closing brackets we need depending on the dimension of the vector
     iter1 = 0 # iterator for while loop that goes through val
