@@ -26,4 +26,4 @@ parse: $(PARSING)/parse.c vector.tab.c
 parse.c: $(PARSING)/parse.l
 	flex -t $(PARSING)/parse.l > $(PARSING)/parse.c
 clean: 
-	rm trace.json output.txt $(BIN)/argument_test $(BIN)/example $(BIN)/map_test $(BIN)/recursion $(BIN)/var_test $(BIN)/vector_test $(PARSING)/parse $(PARSING)/vector.tab.c $(PARSING)/vector.tab.h $(PARSING)/vector.output $(PARSING)/parse.c myinput.in
+	rm trace.json output.txt $(BIN)/argument_test $(BIN)/example $(BIN)/map_test $(BIN)/recursion $(BIN)/var_test $(BIN)/vector_test $(PARSING)/parse $(PARSING)/vector.tab.c $(PARSING)/vector.tab.h vector.output $(PARSING)/parse.c myinput.in
