@@ -22,7 +22,11 @@ input:  line
 ;
 
 line:     'N' {printf("%s", $1);} vector line
+          | 'N' {printf("%s", $1);} deque line
           | 
+;
+
+deque:    'D' '[' {printf("[");} vect_contents ']' {printf("]");}
 ;
 
 vector:   'V' '[' {printf("[");} vect_contents ']' {printf("]");}

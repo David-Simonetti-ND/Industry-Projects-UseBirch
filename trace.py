@@ -31,13 +31,6 @@ return_value = None
 args = {}
 command_line_args = []
 def check_vector(val):
-    parse_in = open('myinput.in', 'w')
-    parse_in.write(f"v = {val}\n")
-    parse_in.close()
-    parse_in = open('myinput.in', 'r')
-    print(val)
-    p = subprocess.Popen('parsing/parse', stdin=parse_in)
-    p.wait()
     new_vector_string = '' # this holds the string which will later be turned into a list and returned to the user. It is what usebirch wants to be displayed
     closing_counter = 0 # counts how many closing brackets we need depending on the dimension of the vector
     iter1 = 0 # iterator for while loop that goes through val
@@ -188,9 +181,16 @@ def define_val_type(val): # recursive function used to change strings into typed
         return tempList
 
     # process vectors
+    if "std::vector" in val or "std::queue" in val or "std::deque" in val:
+        parse_in = open('myinput.in', 'w')
+        parse_in.write(f"var = {val}\n")
+        parse_in.close()
+        parse_in = open('myinput.in', 'r')
+        print(val)
+        p = subprocess.Popen('parsing/parse', stdin=parse_in)
+        p.wait()
     if "std::vector" in val:
         return check_vector(val)
-      
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
 
