@@ -4,9 +4,7 @@
 #define YYSTYPE int
 #define YYERROR_VERBOSE
 #define YYDEBUG 1
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "globals.h"
 %}
 
 /* BISON Declarations */
@@ -21,20 +19,21 @@
 input:  line 
 ;
 
-line:     'N' {printf("%s", $1);} vector line
-          | 'N' {printf("%s", $1);} deque line
+line:       'N' { BPRINT2("%s", $1) } vector line
+          | 'N' { BPRINT2("%s", $1) } deque line
           | 
 ;
 
-deque:    'D' '[' {printf("[");} vect_contents ']' {printf("]");}
+deque:    'D' '[' { BPRINT("[") } vect_contents ']' { BPRINT("]") }
 ;
 
-vector:   'V' '[' {printf("[");} vect_contents ']' {printf("]");}
+vector:   'V' '[' { BPRINT("[") } vect_contents ']' { BPRINT("]") }
 ;
 
 vect_contents: var 
+            | 'F' char
             | vector 
-            | vect_contents ',' {printf(",");}  vect_contents 
+            | vect_contents ',' { BPRINT(",") }  vect_contents 
 
 ;
 
@@ -42,8 +41,9 @@ var:   int
      | string
 ;
 
-int:  'F' {printf("%d", $1);};
-string: 'S' {printf("%s", $1);};
+int:  'F' { BPRINT2("%d", $1) };
+string: 'S' { BPRINT2("%s", $1) };
+char: 'C' { BPRINT2("%c", $1) };
 
 %%
 /* Lexical analyzer returns a double floating point 
@@ -55,10 +55,9 @@ string: 'S' {printf("%s", $1);};
 
 #include <stdio.h>
 
-yyerror (s)  /* Called by yyparse on error */
-     char *s;
+yyerror (char *s)  /* Called by yyparse on error */
 {
-  printf ("Error: %s\n", s);
+  printf ("Error on line %d: %s\n", lineno, s);
 }
 
 main ()

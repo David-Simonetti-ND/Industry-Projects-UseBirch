@@ -20,11 +20,11 @@ update_gdb:
 	cp .gdbpoint ~/.gdbinit
 vector: vector.tab.c
 	gcc $(PARSING)/vector.tab.c -o $(PARSING)/vector
-vector.tab.c: $(PARSING)/vector.y 
+vector.tab.c: $(PARSING)/vector.y $(PARSING)/globals.h
 	bison --debug -t -d -Dparse.trace $(PARSING)/vector.y -o $(PARSING)/vector.tab.c
 parse: $(PARSING)/parse.c vector.tab.c
 	gcc $(PARSING)/vector.tab.c $(PARSING)/parse.c -o $(PARSING)/parse
-parse.c: $(PARSING)/parse.l
+parse.c: $(PARSING)/parse.l $(PARSING)/globals.h
 	flex -t $(PARSING)/parse.l > $(PARSING)/parse.c
 clean: 
 	rm trace.json output.txt $(BIN)/argument_test $(BIN)/example $(BIN)/map_test $(BIN)/recursion $(BIN)/var_test $(BIN)/vector_test $(PARSING)/parse $(PARSING)/vector.tab.c $(PARSING)/vector.tab.h $(PARSING)/vector.output $(PARSING)/parse.c myinput.in
