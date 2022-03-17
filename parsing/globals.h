@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-#define NAME 'N'
+enum TOKENS {NAME = 256, VECTOR, DEQUE, INTEGER, STRING, CHAR, SSCOPE, ESCOPE};
+/*
 #define VECTOR 'V'
 #define DEQUE 'D'
 #define INTEGER 'F'
@@ -10,6 +12,7 @@
 #define CHAR 'C'
 #define SSCOPE '['
 #define ESCOPE ']'
+*/
 
 #define ENABLE_FLEX_OUTPUT 0
 #define ENABLE_BISON_OUTPUT 1
