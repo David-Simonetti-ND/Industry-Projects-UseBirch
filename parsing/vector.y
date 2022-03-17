@@ -51,7 +51,7 @@ char: BCHAR { BPRINT2("%c", $1) };
 
 yyerror (char *s)  /* Called by yyparse on error */
 {
-  printf ("Error on line %d: %s\n", lineno, s);
+  printf ("Error on line %d, character number %d: %s\n", lineno, num_chars, s);
 }
 
 main ()

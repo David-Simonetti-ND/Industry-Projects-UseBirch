@@ -5,6 +5,8 @@ union yylval
     char *str;
     int num;
 } yylval;
+int lineno = 0;
+int num_chars = 0;
 %}
 %option noyywrap
 
@@ -22,35 +24,41 @@ NAME [a-zA-Z0-9]+" ="
 
 {NAME}   {   
             yylval.str = strdup(yytext); 
+            num_chars += strlen(yytext);
             FPRINT2("Tokenizing name: %s ", yylval.str) 
             return NAME;
          }
 {VECTOR} { 
-            FPRINT("Encountering vector\n");
+            num_chars += strlen(yytext);
+            FPRINT("Encountering vector\n")
             return VECTOR; 
          }
 {DEQUE}  { 
+            num_chars += strlen(yytext);
             FPRINT("Encountering deque ")
             return DEQUE; 
          }
-{QUEUE} {FPRINT("Encountering queue ")}
-\{ { FPRINT("Starting scope [ "); return SSCOPE;}
-\} { FPRINT("] Ending scope "); return ESCOPE;}
-\n { printf("\n"); lineno++; }
+{QUEUE} {FPRINT("Encountering queue ") num_chars += strlen(yytext);}
+\{ { FPRINT("Starting scope [ "); num_chars += strlen(yytext); return SSCOPE;}
+\} { FPRINT("] Ending scope "); num_chars += strlen(yytext); return ESCOPE;}
+\n { printf("\n"); lineno++; num_chars = 0; }
 {SIGNEDNUM} {
                 yylval.num = atoi(yytext); 
+                num_chars += strlen(yytext);
                 FPRINT2("Signed integer found: %d ", yylval.num) 
                 return INTEGER; 
             }
 {STRING} {
             yylval.str = strdup(yytext); 
+            num_chars += strlen(yytext);
             FPRINT2("String found: %s ", yylval.str)
             return STRING; 
          }
 {CCHAR} {
+        num_chars += strlen(yytext);
         FPRINT("C CHAR")
         return CHAR;
         }
-, { FPRINT(", ")  return ',';}
+, { FPRINT(", ") num_chars += strlen(yytext); return ',';}
 .
 %%
