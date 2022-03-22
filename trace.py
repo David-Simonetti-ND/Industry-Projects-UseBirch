@@ -302,6 +302,7 @@ while True: # infinite loop until we reach the end
     for i in range(1, len(response) - 1):
         try:
                 (key, val) = response[i]['payload'].split(" = ", 1)
+                print(val)
         except:
             continue
         val = define_val_type(val)

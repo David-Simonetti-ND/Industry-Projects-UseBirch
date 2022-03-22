@@ -15,6 +15,8 @@
 %token BCHAR 261
 %token BSSCOPE 262
 %token BESCOPE 263
+%token BMAP 264
+%token BKEY 265
 %right ',' // important -- do not remove
 
 /* Grammar follows */
@@ -24,6 +26,7 @@ input:  line
 
 line:       BNAME { BPRINT2("%s", $1) } vector line
           | BNAME { BPRINT2("%s", $1) } deque line
+          | BNAME { BPRINT2("%s", $1) } map line
           | 
 ;
 
@@ -33,8 +36,20 @@ deque:    BDEQUE BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
 vector:   BVECTOR BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
 ;
 
+map:      BMAP BSSCOPE { BPRINT("{") } map_contents BESCOPE { BPRINT("}") }
+;
+
+key:      BKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2("%s", $1 + 1) }
+
+map_contents:  key vector
+             | key var
+             | key BINTEGER char
+             | map_contents ',' { BPRINT(",") }  map_contents 
+
+;
+
 vect_contents: var 
-             | 'F' char
+             | BINTEGER char
              | vector 
              | vect_contents ',' { BPRINT(",") }  vect_contents 
 ;
