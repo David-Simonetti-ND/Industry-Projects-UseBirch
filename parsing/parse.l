@@ -4,6 +4,7 @@ union yylval
 {
     char *str;
     int num;
+    double dbl;
 } yylval;
 int lineno = 0;
 int num_chars = 0;
@@ -11,11 +12,13 @@ int num_chars = 0;
 %option noyywrap
 
 SIGNEDNUM (-?)[0-9]+
+FLOAT (-?)[0-9]+\.[0-9]+
 CHAR [a-zA-Z]
 CCHAR \'{CHAR}\'
 STRING \"{CHAR}+\"
 SKEY \[{STRING}\]" = "
 NKEY \[{SIGNEDNUM}\]" = "
+CKEY \[{SIGNEDNUM}" "{CCHAR}\]" = "
 VECTOR "std::vector of length "{SIGNEDNUM}", capacity "{SIGNEDNUM}" ="
 DEQUE "std::deque with "{SIGNEDNUM}" elements"
 QUEUE "std::queue wrapping: "
@@ -51,6 +54,12 @@ NAME [a-zA-Z0-9]+" ="
 \} { FPRINT("] Ending scope "); num_chars += strlen(yytext); return ESCOPE;}
 
 \n { printf("\n"); lineno++; num_chars = 0; }
+{FLOAT}    {
+                yylval.dbl = atof(yytext); 
+                num_chars += strlen(yytext);
+                FPRINT2("Float found: %lf ", yylval.dbl) 
+                return FLOAT; 
+            }
 {SIGNEDNUM} {
                 yylval.num = atoi(yytext); 
                 num_chars += strlen(yytext);
@@ -66,7 +75,7 @@ NAME [a-zA-Z0-9]+" ="
 {SKEY}   {
             yylval.str = strdup(yytext); 
             num_chars += strlen(yytext);
-            FPRINT2("String found: %s ", yylval.str)
+            FPRINT2("String key found: %s ", yylval.str)
             return SKEY; 
          }
 {NKEY}   {
@@ -74,6 +83,12 @@ NAME [a-zA-Z0-9]+" ="
             num_chars += strlen(yytext);
             FPRINT2("Integer key found: %d ", yylval.num) 
             return NKEY; 
+         }
+{CKEY}   {
+            yylval.str = strdup(yytext + 3); 
+            num_chars += strlen(yytext);
+            FPRINT2("Char key found: %s ", yylval.str)
+            return CKEY; 
          }
 {CCHAR} {
         num_chars += strlen(yytext);

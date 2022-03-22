@@ -7,17 +7,24 @@
 /* BISON Declarations */
 %error-verbose
 %verbose
-%token BNAME 256
-%token BVECTOR 257
-%token BDEQUE 258
-%token BINTEGER 259
-%token BSTRING 260
-%token BCHAR 261
-%token BSSCOPE 262
-%token BESCOPE 263
-%token BMAP 264
-%token BSKEY 265
-%token BNKEY 266
+%union
+{
+  int ival;
+  double fval;
+}
+%token <ival> BNAME 256
+%token <ival> BVECTOR 257
+%token <ival> BDEQUE 258
+%token <ival> BINTEGER 259
+%token <ival> BSTRING 260
+%token <ival> BCHAR 261
+%token <ival> BSSCOPE 262
+%token <ival> BESCOPE 263
+%token <ival> BMAP 264
+%token <ival> BSKEY 265
+%token <ival> BNKEY 266
+%token <ival> BCKEY 267
+%token <fval> BFLOAT 268
 %right ',' // important -- do not remove
 
 /* Grammar follows */
@@ -42,6 +49,7 @@ map:      BMAP BSSCOPE { BPRINT("{") } map_contents BESCOPE { BPRINT("}") }
 
 key:      BSKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2(" { %s", $1 + 1) }
         | BNKEY { BPRINT2(" { %d = ", $1) }
+        | BCKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2(" { %s", $1 + 1) }
 
 map_contents:  key vector { BPRINT("} ") }
              | key var { BPRINT("} ") }
@@ -58,11 +66,13 @@ vect_contents: var
 
 var:   int
      | string
+     | float
 ;
 
 int:  BINTEGER { BPRINT2("%d", $1) };
 string: BSTRING { BPRINT2("%s", $1) };
 char: BCHAR { BPRINT2("%c", $1) };
+float: BFLOAT { BPRINT2("%lf", $1) };
 
 %%
 

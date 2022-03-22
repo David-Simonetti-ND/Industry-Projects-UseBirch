@@ -132,6 +132,7 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '[': ']',
     '(': ')',
 }
+curr_name = ""
 def define_val_type(val): # recursive function used to change strings into typed variables
     val = val.replace("\\n", "").replace("\\", "").rstrip("\"").lstrip("\"")
     val = val.lstrip()
@@ -154,7 +155,7 @@ def define_val_type(val): # recursive function used to change strings into typed
         pass
     if "std::vector" in val or "std::queue" in val or "std::deque" in val or "std::map" in val:
         parse_in = open('myinput.in', 'w')
-        parse_in.write(f"var = {val}\n")
+        parse_in.write(f"{curr_name} = {val}\n")
         parse_in.close()
         parse_in = open('myinput.in', 'r')
         p = subprocess.Popen('parsing/parse', stdin=parse_in)
@@ -303,6 +304,7 @@ while True: # infinite loop until we reach the end
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except:
             continue
+        curr_name = key
         val = define_val_type(val)
         try:
             if all_main_locals[key] != val:
