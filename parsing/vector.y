@@ -16,7 +16,8 @@
 %token BSSCOPE 262
 %token BESCOPE 263
 %token BMAP 264
-%token BKEY 265
+%token BSKEY 265
+%token BNKEY 266
 %right ',' // important -- do not remove
 
 /* Grammar follows */
@@ -39,11 +40,12 @@ vector:   BVECTOR BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
 map:      BMAP BSSCOPE { BPRINT("{") } map_contents BESCOPE { BPRINT("}") }
 ;
 
-key:      BKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2("%s", $1 + 1) }
+key:      BSKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2(" { %s", $1 + 1) }
+        | BNKEY { BPRINT2(" { %d = ", $1) }
 
-map_contents:  key vector
-             | key var
-             | key BINTEGER char
+map_contents:  key vector { BPRINT("} ") }
+             | key var { BPRINT("} ") }
+             | key BINTEGER char { BPRINT("} ") }
              | map_contents ',' { BPRINT(",") }  map_contents 
 
 ;

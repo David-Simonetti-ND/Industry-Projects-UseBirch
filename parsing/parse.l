@@ -14,7 +14,8 @@ SIGNEDNUM (-?)[0-9]+
 CHAR [a-zA-Z]
 CCHAR \'{CHAR}\'
 STRING \"{CHAR}+\"
-KEY \[{STRING}\]" = "
+SKEY \[{STRING}\]" = "
+NKEY \[{SIGNEDNUM}\]" = "
 VECTOR "std::vector of length "{SIGNEDNUM}", capacity "{SIGNEDNUM}" ="
 DEQUE "std::deque with "{SIGNEDNUM}" elements"
 QUEUE "std::queue wrapping: "
@@ -62,11 +63,17 @@ NAME [a-zA-Z0-9]+" ="
             FPRINT2("String found: %s ", yylval.str)
             return STRING; 
          }
-{KEY}    {
+{SKEY}   {
             yylval.str = strdup(yytext); 
             num_chars += strlen(yytext);
             FPRINT2("String found: %s ", yylval.str)
-            return KEY; 
+            return SKEY; 
+         }
+{NKEY}   {
+            yylval.num = atoi(yytext + 1); 
+            num_chars += strlen(yytext);
+            FPRINT2("Integer key found: %d ", yylval.num) 
+            return NKEY; 
          }
 {CCHAR} {
         num_chars += strlen(yytext);
