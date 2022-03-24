@@ -196,6 +196,14 @@ gdbmi = GdbController()
 if len(sys.argv) < 2:
     print("Please pass in at least one argument (executable you wish to run)!")
     exit()
+# Test whether this file exists by checking if the path exists
+if not os.path.exists(sys.argv[1]):
+    print("This executable does not exist!")
+    exit()
+# Test whether the file is an executable
+if not os.access(sys.argv[1], os.X_OK)
+    print("This file is not an executable!")
+    exit()
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
