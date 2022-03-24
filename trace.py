@@ -201,7 +201,7 @@ if not os.path.exists(sys.argv[1]):
     print("This executable does not exist!")
     exit()
 # Test whether the file is an executable
-if not os.access(sys.argv[1], os.X_OK)
+if not os.access(sys.argv[1], os.X_OK):
     print("This file is not an executable!")
     exit()
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
