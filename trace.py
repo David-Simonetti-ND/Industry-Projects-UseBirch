@@ -195,15 +195,31 @@ gdbmi = GdbController()
 # Load binary passed in argv[1] and check we only have one arg
 if len(sys.argv) < 2:
     print("Please pass in at least one argument (executable you wish to run)!")
+    os.remove("output.txt")
     exit()
 # Test whether this file exists by checking if the path exists
 if not os.path.exists(sys.argv[1]):
     print("This executable does not exist!")
+    os.remove("output.txt")
     exit()
 # Test whether the file is an executable
 if not os.access(sys.argv[1], os.X_OK):
     print("This file is not an executable!")
+    os.remove("output.txt")
     exit()
+
+# Testing time it took program to run
+os.popen(f'(time {sys.argv[1]}) &> time.txt')
+time.sleep(5)
+run_time = open('time.txt')
+if not list(run_time.read().splitlines()):
+    print(list(run_time.read().splitlines()))
+    print("There may be an infinite loop in the code")
+    os.remove("output.txt")
+    os.remove("time.txt")
+    run_time.close()
+    exit()
+
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
@@ -321,6 +337,7 @@ while True: # infinite loop until we reach the end
 # output the trace.json from internal_trace_json
 output.close()
 os.remove("output.txt")
+os.remove("time.txt")
 out_file = open("trace.json", "w")
 json.dump(internal_trace_json, out_file, indent = 6)
 out_file.close()
