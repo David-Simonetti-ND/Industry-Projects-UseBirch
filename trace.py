@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
-import time, sys, json, os, ast, csv
-import re, signal
+import time, sys, json, os, ast
+import re, signal, subprocess
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -30,15 +30,13 @@ return_value = None
 args = {}
 command_line_args = []
 def check_infiniteloop():
-    time_process = os.popen(f'(time {sys.argv[1]}) &> time.txt')
+    time_process = subprocess.Popen(f'(time {sys.argv[1]}) &> time.txt', shell = True, preexec_fn=os.setsid)
     time.sleep(5)
     run_time = open('time.txt')
     if not list(run_time.read().splitlines()):
         print("There may be an infinite loop in the code")
         os.remove("time.txt")
-        for line in csv.reader(os.popen('ps')):
-            if sys.argv[1].split('/')[-1] in line[0].split():
-                os.kill(int(line[0].split()[0]), signal.SIGKILL)
+        os.killpg(os.getpgid(time_process.pid), signal.SIGKILL)
         run_time.close()
         exit()
 
