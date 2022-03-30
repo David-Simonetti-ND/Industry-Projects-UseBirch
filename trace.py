@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
-import time, sys, json, os, ast
-import re
+import time, sys, json, os, ast, csv
+import re, signal
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -29,6 +29,32 @@ local_variable_dictionary = {} # create a dictionary listing all local variables
 return_value = None
 args = {}
 command_line_args = []
+def check_infiniteloop():
+    time_process = os.popen(f'(time {sys.argv[1]}) &> time.txt')
+    time.sleep(5)
+    run_time = open('time.txt')
+    if not list(run_time.read().splitlines()):
+        print("There may be an infinite loop in the code")
+        os.remove("time.txt")
+        for line in csv.reader(os.popen('ps')):
+            if sys.argv[1].split('/')[-1] in line[0].split():
+                os.kill(int(line[0].split()[0]), signal.SIGKILL)
+        run_time.close()
+        exit()
+
+def check_executable():
+    if len(sys.argv) < 2:
+        print("Please pass in at least one argument (executable you wish to run)!")
+        exit()
+    # Test whether this file exists by checking if the path exists
+    if not os.path.exists(sys.argv[1]):
+        print("This executable does not exist!")
+        exit()
+    # Test whether the file is an executable
+    if not os.access(sys.argv[1], os.X_OK):
+        print("This file is not an executable!")
+        exit()
+
 def check_vector(val):
     new_vector_string = '' # this holds the string which will later be turned into a list and returned to the user. It is what usebirch wants to be displayed
     closing_counter = 0 # counts how many closing brackets we need depending on the dimension of the vector
@@ -187,39 +213,15 @@ def define_val_type(val): # recursive function used to change strings into typed
             val = val.split('\'')[1]
 
     return val
-
 # Open file that will hold stdout of gdb
-output = open("output.txt", "w+")
 # Start gdb process
 gdbmi = GdbController()
-# Load binary passed in argv[1] and check we only have one arg
-if len(sys.argv) < 2:
-    print("Please pass in at least one argument (executable you wish to run)!")
-    os.remove("output.txt")
-    exit()
-# Test whether this file exists by checking if the path exists
-if not os.path.exists(sys.argv[1]):
-    print("This executable does not exist!")
-    os.remove("output.txt")
-    exit()
-# Test whether the file is an executable
-if not os.access(sys.argv[1], os.X_OK):
-    print("This file is not an executable!")
-    os.remove("output.txt")
-    exit()
-
-# Testing time it took program to run
-os.popen(f'(time {sys.argv[1]}) &> time.txt')
-time.sleep(5)
-run_time = open('time.txt')
-if not list(run_time.read().splitlines()):
-    print(list(run_time.read().splitlines()))
-    print("There may be an infinite loop in the code")
-    os.remove("output.txt")
-    os.remove("time.txt")
-    run_time.close()
-    exit()
-
+# Function to check if the executable is there and if number of arguments passed is correct
+check_executable()
+# Testing for infinite loop
+check_infiniteloop()
+# Open file that will hold stdout of gdb
+output = open("output.txt", "w+")
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 # load symbols from the executable
 gdbmi.write(f'file {sys.argv[1]}')
