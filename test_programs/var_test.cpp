@@ -10,6 +10,9 @@ int add(int a, int b)
 int main() 
 {
     int a = 5;
+	while(1){
+
+	}
     int addFive = add(a, 5);
     double myDouble = 6.5;
     int foo [5] = { 16, 2, 77, 40, 12071 };
