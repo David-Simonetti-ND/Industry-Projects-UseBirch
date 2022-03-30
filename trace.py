@@ -2,7 +2,7 @@
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os, ast
-import re, signal, subprocess
+import subprocess, signal
 # how to run program: once your conda environment is initialized, run ./trace.py with the first argument being the executable you wish to run
 # ex. ./trace.py example
 # output will appear in trace.json
@@ -155,6 +155,7 @@ punctMap = { # Only the braces in this map are used as of now. This is here so t
     '[': ']',
     '(': ')',
 }
+curr_name = ""
 def define_val_type(val): # recursive function used to change strings into typed variables
     val = val.replace("\\n", "").replace("\\", "").rstrip("\"").lstrip("\"")
     val = val.lstrip()
@@ -175,6 +176,13 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
+    if "std::vector" in val or "std::queue" in val or "std::deque" in val or "std::map" in val:
+        parse_in = open('myinput.in', 'w')
+        parse_in.write(f"{curr_name} = {val}\n")
+        parse_in.close()
+        parse_in = open('myinput.in', 'r')
+        p = subprocess.Popen('parsing/parse', stdin=parse_in)
+        p.wait()
     # process maps 
     if "std::map" in val:
         map = {}
@@ -206,7 +214,6 @@ def define_val_type(val): # recursive function used to change strings into typed
     # process vectors
     if "std::vector" in val:
         return check_vector(val)
-      
     if re.match(r"(\d)+ '.'", val): #if the value matches a string that begins with any number of digits, then has a space and one character wrapped in single quotes
             val = val.split('\'')[1]
 
@@ -320,6 +327,7 @@ while True: # infinite loop until we reach the end
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except:
             continue
+        curr_name = key
         val = define_val_type(val)
         try:
             if all_main_locals[key] != val:
