@@ -3,6 +3,7 @@ from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os, ast
 import re
+import subprocess
 import trace_vars
 import trace_print
 
@@ -170,6 +171,7 @@ while True: # infinite loop until we reach the end
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except:
             continue
+        curr_name = key
         val = define_val_type(val)
         try:
             if all_main_locals[key] != val:
