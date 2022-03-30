@@ -31,7 +31,7 @@ args = {}
 command_line_args = []
 def check_infiniteloop():
     time_process = subprocess.Popen(f'(time {sys.argv[1]}) &> time.txt', shell = True, preexec_fn=os.setsid)
-    time.sleep(5)
+    time.sleep(10)
     run_time = open('time.txt')
     if not list(run_time.read().splitlines()):
         print("There may be an infinite loop in the code")
