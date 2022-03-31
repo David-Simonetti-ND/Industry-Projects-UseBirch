@@ -15,4 +15,4 @@ vector_test: vector_test.cpp
 containers: containers.cpp
 	g++ -std=c++11 -Wall -ggdb containers.cpp -o ../$(BIN)/containers
 clean:
-	rm ../$(BIN)/argument_test ../$(BIN)/example ../$(BIN)/map_test ../$(BIN)/recursion ../$(BIN)/var_test ../$(BIN)/vector_test
+	rm ../$(BIN)/argument_test ../$(BIN)/example ../$(BIN)/map_test ../$(BIN)/recursion ../$(BIN)/var_test ../$(BIN)/vector_test ../$(BIN)/containers
