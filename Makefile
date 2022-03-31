@@ -5,9 +5,9 @@ all: bin test_program parse
 bin:
 	mkdir bin
 test_program:
-	cd test_programs && $(MAKE) 
+	cd test_programs && $(MAKE) all
 parse:
-	cd parsing && $(MAKE) 
+	cd parsing && $(MAKE) all
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirch/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
 	cp .gdbpoint ~/.gdbinit

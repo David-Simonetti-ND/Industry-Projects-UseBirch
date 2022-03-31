@@ -43,6 +43,9 @@
         "utility": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "forward_list": "cpp",
+        "map": "cpp",
+        "unordered_set": "cpp"
     }
 }
