@@ -5,7 +5,6 @@ import time, sys, json, os, ast
 import re
 import subprocess
 import trace_vars
-import trace_print
 
 internal_trace_json = {} # used to hold trace.json
 current_frame_number = 0 # current frame in the JSON
@@ -39,6 +38,9 @@ def append_frame(): # call this function when all the global variables are up to
     "args" : args
     }
     current_frame_number += 1
+
+def print_frame_json(): # used to debug and print out all the frames currently in internal_trace_json
+    pprint(internal_trace_json["frame " + str(current_frame_number - 1)])
 
 # Open file that will hold stdout of gdb
 output = open("output.txt", "w+")
@@ -102,13 +104,14 @@ for line_of_gdb_output in response: # loop through output and look for lines whe
 response = gdbmi.write('info locals') # get info about local vars
 # parse through the response (variables are output with a lot of newlines, very messy)
 # put it together into one string to be manipulated
+
 all_main_locals = {}
 for i in range(1, len(response) - 1):
     try:
         (key, val) = response[i]['payload'].split(" = ", 1)
     except:
         continue
-    val = define_val_type(val)
+    val = trace_vars.define_val_type(val)
     all_main_locals[key] = val
 
 append_frame()
@@ -172,7 +175,7 @@ while True: # infinite loop until we reach the end
         except:
             continue
         curr_name = key
-        val = define_val_type(val)
+        val = trace_vars.define_val_type(val)
         try:
             if all_main_locals[key] != val:
                 all_main_locals[key] = val

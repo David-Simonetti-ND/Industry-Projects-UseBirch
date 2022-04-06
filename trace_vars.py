@@ -1,3 +1,9 @@
+punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
+    '{': '}',
+    '[': ']',
+    '(': ')',
+}
+
 def check_vector(val):
     new_vector_string = '' # this holds the string which will later be turned into a list and returned to the user. It is what usebirch wants to be displayed
     closing_counter = 0 # counts how many closing brackets we need depending on the dimension of the vector
