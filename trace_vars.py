@@ -1,3 +1,5 @@
+import re
+
 punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
     '{': '}',
     '[': ']',
