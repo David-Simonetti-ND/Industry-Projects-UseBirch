@@ -1,0 +1,1167 @@
+{
+      "frame 0": {
+            "currentLine": "22",
+            "codeNextToRun": "std::forward_list<int>      isllist = {6, 7, 8, 9, 10};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {}
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 1": {
+            "currentLine": "23",
+            "codeNextToRun": "std::forward_list<char>     csllist = {'a', 'b', 'c'};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 2": {
+            "currentLine": "24",
+            "codeNextToRun": "std::forward_list<float>    fsllist = {1.1, 2.1, 3.1};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 3": {
+            "currentLine": "25",
+            "codeNextToRun": "std::forward_list<double>   dsllist = {10.1, 11.1, 12.1};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 4": {
+            "currentLine": "27",
+            "codeNextToRun": "std::list<int>      idllist = {6, 7, 8, 9, 10};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 5": {
+            "currentLine": "28",
+            "codeNextToRun": "std::list<char>     cdllist = {'a', 'b', 'c'};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 6": {
+            "currentLine": "29",
+            "codeNextToRun": "std::list<float>    fdllist = {1.1, 2.1, 3.1};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 7": {
+            "currentLine": "30",
+            "codeNextToRun": "std::list<double>   ddllist = {10.1, 11.1, 12.1};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 8": {
+            "currentLine": "32",
+            "codeNextToRun": "std::deque<int>     id = {7, 5, 16, 8};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 9": {
+            "currentLine": "33",
+            "codeNextToRun": "std::deque<char>    cd = {'a', 'b', 'c', 'd'};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 10": {
+            "currentLine": "34",
+            "codeNextToRun": "std::deque<float>   fd = {7.1, 5.2, 16.3, 8.4};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 11": {
+            "currentLine": "35",
+            "codeNextToRun": "std::deque<double>  dd = {7.8, 5.7, 16.6, 8.5};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 12": {
+            "currentLine": "37",
+            "codeNextToRun": "std::queue<int>     iq(id);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 13": {
+            "currentLine": "38",
+            "codeNextToRun": "std::queue<char>    cq(cd);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 14": {
+            "currentLine": "39",
+            "codeNextToRun": "std::queue<float>   fq(fd);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 15": {
+            "currentLine": "40",
+            "codeNextToRun": "std::queue<double>  dq(dd);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 16": {
+            "currentLine": "42",
+            "codeNextToRun": "std::priority_queue<int>    ipq; ipq.push(50); ipq.push(40); ipq.push(60); ipq.push(70);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 17": {
+            "currentLine": "43",
+            "codeNextToRun": "std::priority_queue<char>   cpq; cpq.push('a'); cpq.push('b'); cpq.push('c'); cpq.push('d');",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 18": {
+            "currentLine": "44",
+            "codeNextToRun": "std::priority_queue<float>  fpq; fpq.push(50.1); fpq.push(40.2); fpq.push(60.3); fpq.push(70.4);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 19": {
+            "currentLine": "45",
+            "codeNextToRun": "std::priority_queue<double> dpq; dpq.push(50.5); dpq.push(40.6); dpq.push(60.7); dpq.push(70.8);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 20": {
+            "currentLine": "47",
+            "codeNextToRun": "std::stack<int>     is; is.push(-6); is.push(-7); is.push(-8);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 21": {
+            "currentLine": "48",
+            "codeNextToRun": "std::stack<char>    cs; cs.push('a'); cs.push('b'); cs.push('c');",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 22": {
+            "currentLine": "49",
+            "codeNextToRun": "std::stack<float>   fs; fs.push(-6.1); fs.push(-7.2); fs.push(-8.3);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 23": {
+            "currentLine": "50",
+            "codeNextToRun": "std::stack<double>  ds; ds.push(-6.6); ds.push(-7.5); ds.push(-8.4);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 24": {
+            "currentLine": "52",
+            "codeNextToRun": "std::set<int>       iset; iset.insert(1); iset.insert(2); iset.insert(3);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 25": {
+            "currentLine": "53",
+            "codeNextToRun": "std::set<char>      cset; cset.insert('a'); cset.insert('b'); cset.insert('c');",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 26": {
+            "currentLine": "54",
+            "codeNextToRun": "std::set<float>     fset; fset.insert(1.1); fset.insert(2.2); fset.insert(3.3);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 27": {
+            "currentLine": "55",
+            "codeNextToRun": "std::set<double>    dset; dset.insert(1.6); dset.insert(2.7); dset.insert(3.8);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 28": {
+            "currentLine": "57",
+            "codeNextToRun": "std::multiset<int, std::greater<int> > multset;",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 29": {
+            "currentLine": "58",
+            "codeNextToRun": "multset.insert(40);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 0 elements"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 30": {
+            "currentLine": "59",
+            "codeNextToRun": "multset.insert(30);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 1 element = {[0] = 40}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 31": {
+            "currentLine": "60",
+            "codeNextToRun": "multset.insert(60);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 2 elements = {[0] = 40, [1] = 30}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 32": {
+            "currentLine": "61",
+            "codeNextToRun": "multset.insert(60);",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 3 elements = {[0] = 60, [1] = 40, [2] = 30}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 33": {
+            "currentLine": "62",
+            "codeNextToRun": "std::map<int, float> map = { {5, 3.14}, {10, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {11, 1.235555}};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 4 elements = {[0] = 60, [1] = 60, [2] = 40, [3] = 30}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 34": {
+            "currentLine": "63",
+            "codeNextToRun": "std::multimap<int, float> mmmap = { {5, 3.14}, {5, 6.23556}, {8, 1.2355}, {8, 1.2355}, {9, 1.23525}, {0, 1.6}};",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 4 elements = {[0] = 60, [1] = 60, [2] = 40, [3] = 30}",
+                              "map": {
+                                    "5": 3.1400001,
+                                    "8": 1.23549998,
+                                    "9": 1.23525,
+                                    "10": 6.23555994,
+                                    "11": 1.23555505
+                              }
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      },
+      "frame 35": {
+            "currentLine": "66",
+            "codeNextToRun": "return 0;",
+            "fileName": "containers.cpp",
+            "commandLineArgs": [],
+            "stdout": "",
+            "stack": {
+                  "numStackFrames": 1,
+                  "topStackFrame": {
+                        "methodName": "main()",
+                        "variables": {
+                              "isllist": "std::forward_list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "csllist": "std::forward_list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fsllist": "std::forward_list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "dsllist": "std::forward_list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "idllist": "std::list = {[0] = 6, [1] = 7, [2] = 8, [3] = 9, [4] = 10}",
+                              "cdllist": "std::list = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fdllist": "std::list = {[0] = 1.10000002, [1] = 2.0999999, [2] = 3.0999999}",
+                              "ddllist": "std::list = {[0] = 10.1, [1] = 11.1, [2] = 12.1}",
+                              "id": "std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cd": "std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fd": "std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dd": "std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "iq": "std::queue wrapping: std::deque with 4 elements = {7, 5, 16, 8}",
+                              "cq": "std::queue wrapping: std::deque with 4 elements = {97 'a', 98 'b', 99 'c', 100 'd'}",
+                              "fq": "std::queue wrapping: std::deque with 4 elements = {7.0999999, 5.19999981, 16.2999992, 8.39999962}",
+                              "dq": "std::queue wrapping: std::deque with 4 elements = {7.7999999999999998, 5.7000000000000002, 16.600000000000001, 8.5}",
+                              "is": "std::stack wrapping: std::deque with 3 elements = {-6, -7, -8}",
+                              "cs": "std::stack wrapping: std::deque with 3 elements = {97 'a', 98 'b', 99 'c'}",
+                              "fs": "std::stack wrapping: std::deque with 3 elements = {-6.0999999, -7.19999981, -8.30000019}",
+                              "ds": "std::stack wrapping: std::deque with 3 elements = {-6.5999999999999996, -7.5, -8.4000000000000004}",
+                              "iset": "std::set with 3 elements = {[0] = 1, [1] = 2, [2] = 3}",
+                              "cset": "std::set with 3 elements = {[0] = 97 'a', [1] = 98 'b', [2] = 99 'c'}",
+                              "fset": "std::set with 3 elements = {[0] = 1.10000002, [1] = 2.20000005, [2] = 3.29999995}",
+                              "dset": "std::set with 3 elements = {[0] = 1.6000000000000001, [1] = 2.7000000000000002, [2] = 3.7999999999999998}",
+                              "multset": "std::multiset with 4 elements = {[0] = 60, [1] = 60, [2] = 40, [3] = 30}",
+                              "map": {
+                                    "5": 3.1400001,
+                                    "8": 1.23549998,
+                                    "9": 1.23525,
+                                    "10": 6.23555994,
+                                    "11": 1.23555505
+                              },
+                              "mmmap": "std::multimap with 6 elements = {[0] = 1.60000002, [5] = 3.1400001, [5] = 6.23555994, [8] = 1.23549998, [8] = 1.23549998, [9] = 1.23525}"
+                        }
+                  },
+                  "returnValue": null
+            },
+            "args": {}
+      }
+}

@@ -11,7 +11,10 @@ parse:
 update_gdb:
 	cp gdbcontroller.py ~/miniconda3/envs/UseBirch/lib/python3.10/site-packages/pygdbmi/gdbcontroller.py
 	cp .gdbpoint ~/.gdbinit
-clean: 
-	cd test_programs && $(MAKE) clean
-	cd parsing && $(MAKE) clean
+clean: clean_parsing clean_test  
 	rm trace.json output.txt  myinput.in
+clean_test:
+	cd test_programs && $(MAKE) clean
+clean_parsing:
+	cd parsing && $(MAKE) clean
+	
