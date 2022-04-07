@@ -174,8 +174,7 @@ while True: # infinite loop until we reach the end
                 (key, val) = response[i]['payload'].split(" = ", 1)
         except:
             continue
-        curr_name = key
-        val = trace_vars.define_val_type(val)
+        val = trace_vars.define_val_type(val, key)
         try:
             if all_main_locals[key] != val:
                 all_main_locals[key] = val

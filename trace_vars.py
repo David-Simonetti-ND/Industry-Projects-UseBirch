@@ -1,4 +1,4 @@
-import re
+import re, subprocess
 
 punctMap = { # Only the braces in this map are used as of now. This is here so that if gdb returns a similar syntax for vectors or maps, adding them to the variable dictionary is easier
     '{': '}',
@@ -83,7 +83,7 @@ def check_vector(val):
     except: # if not possible return empty list
         return []
 
-def define_val_type(val): # recursive function used to change strings into typed variables
+def define_val_type(val, name=None): # recursive function used to change strings into typed variables
     val = val.replace("\\n", "").replace("\\", "").rstrip("\"").lstrip("\"")
     val = val.lstrip()
     if len(val) == 0:
@@ -103,6 +103,13 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
+    if "std::" in val:
+        parse_in = open('myinput.in', 'w')
+        parse_in.write(f"{name} = {val}\n")
+        parse_in.close()
+        parse_in = open('myinput.in', 'r')
+        p = subprocess.Popen('parsing/parse', stdin=parse_in)
+        p.wait()
     # process maps 
     if "std::map" in val:
         map = {}
