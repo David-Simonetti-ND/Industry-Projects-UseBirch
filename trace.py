@@ -153,7 +153,7 @@ def define_val_type(val): # recursive function used to change strings into typed
         return float(val)
     except:
         pass
-    if "std::vector" in val or "std::queue" in val or "std::deque" in val or "std::map" in val:
+    if "std::" in val:
         parse_in = open('myinput.in', 'w')
         parse_in.write(f"{curr_name} = {val}\n")
         parse_in.close()

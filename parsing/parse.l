@@ -29,8 +29,7 @@ ARRAY "_M_elems = "
 MAP "std::map with "{SIGNEDNUM}" elements ="
 SET "std::set with "{SIGNEDNUM}" elements ="
 MSET "std::multiset with "{SIGNEDNUM}" elements = "
-USET "std::unordered_set with "{SIGNEDNUM}" elements"
-UMSET "std::unordered_multiset with "{SIGNEDNUM}" elements"
+MMAP "std::multimap with "{SIGNEDNUM}" elements"
 DLLIST "std::list = "
 SLLIST "std::forward_list = "
 
@@ -73,14 +72,9 @@ NAME [a-zA-Z0-9]+" ="
             FPRINT("Encountering multiset ")
             return MAP; 
          }
-{USET}   { 
+{MMAP}   { 
             num_chars += strlen(yytext);
-            FPRINT("Encountering unordered set ")
-            return MAP; 
-         }
-{UMSET}   { 
-            num_chars += strlen(yytext);
-            FPRINT("Encountering unordered multiset ")
+            FPRINT("Encountering multi map ")
             return MAP; 
          }
 {ARRAY} { 
