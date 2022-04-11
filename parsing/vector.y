@@ -35,14 +35,14 @@
 input:  line 
 ;
 
-line:       BNAME { BPRINT2("%s", $1) } vector line
-          | BNAME { BPRINT2("%s", $1) } deque line
-          | BNAME { BPRINT2("%s", $1) } map line
-          | BNAME { BPRINT2("%s", $1) } array line
+line:       BNAME { BPRINT2("", $1) } vector line
+          | BNAME { BPRINT2("", $1) } deque line
+          | BNAME { BPRINT2("", $1) } map line
+          | BNAME { BPRINT2("", $1) } array line
           |
 ;
 
-deque:    BDEQUE BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
+deque:    BDEQUE BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT(" ]") }
 ;
 
 vector:   BVECTOR BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
@@ -50,17 +50,17 @@ vector:   BVECTOR BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") }
 
 map:      BMAP BSSCOPE { BPRINT("{") } map_contents BESCOPE { BPRINT("}") }
 ;
-array:    BSSCOPE BARRAY BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT("]") } BESCOPE
+array:    BSSCOPE BARRAY BSSCOPE { BPRINT("[") } vect_contents BESCOPE { BPRINT(" ]") } BESCOPE
 ;
 
-key:      BSKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2(" { %s", $1 + 1) }
-        | BNKEY { BPRINT2(" { %d = ", $1) }
-        | BCKEY { char *s = $1; s[strlen(s) - 4] = ' '; BPRINT2(" { %s", $1 + 1) }
+key:      BSKEY { char *s = (char *) $1; s[strlen(s) - 4] = ' '; s[4] = ']'; BPRINT2("[%s", $1 + 1) }
+        | BNKEY { BPRINT2("[%d] = ", $1) }
+        | BCKEY { char *s = (char *) $1; s[strlen(s) - 4] = ' '; s[4] = ']'; BPRINT2("[%s", $1 + 1) }
 
-map_contents:  key vector { BPRINT("} ") }
-             | key var { BPRINT("} ") }
-             | key BINTEGER char { BPRINT("} ") }
-             | map_contents ',' { BPRINT(",") }  map_contents 
+map_contents:  key vector { BPRINT("") }
+             | key var { BPRINT("") }
+             | key BINTEGER char { BPRINT("") }
+             | map_contents ',' { BPRINT(", ") }  map_contents 
 
 ;
 
