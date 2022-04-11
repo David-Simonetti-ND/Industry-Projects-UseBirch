@@ -108,20 +108,29 @@ def define_val_type(val, name=None): # recursive function used to change strings
         parse_in.write(f"{name} = {val}\n")
         parse_in.close()
         parse_in = open('myinput.in', 'r')
-        p = subprocess.Popen('parsing/parse', stdin=parse_in)
+        p = subprocess.Popen('parsing/parse', stdin=parse_in, stdout=subprocess.PIPE)
         p.wait()
+        out, err = p.communicate()
+        if err != None:
+            return 
+        out = out.decode("utf-8")
+        out = out.strip("\n")
+        return define_val_type(out)
     # process maps 
-    if "std::map" in val:
-        map = {}
-        try: 
-            val = val.split("{[",1)[1][0:-1]
+    if "{[" in val:
+        try:
+            map = {}
+            try: 
+                val = val.split("{[",1)[1][0:-1]
+            except:
+                return val
+            items = val.split(", [")
+            for item in items:
+                (key, value) = item.split("] = ", 1)
+                map[define_val_type(key)] = define_val_type(value)
+            return map
         except:
-            return val
-        items = val.split(", [")
-        for item in items:
-            (key, value) = item.split("] = ", 1)
-            map[define_val_type(key)] = define_val_type(value)
-        return map
+            pass
     # process List-Type variables              
     if (val[0] == '{') or (val[0] == '[') or (val[0] == '('):
         end_punct = punctMap[val[0]]
