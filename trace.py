@@ -3,7 +3,7 @@ from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import time, sys, json, os, ast
 import re
-import subprocess
+from subprocess import check_output, STDOUT
 import trace_vars
 
 internal_trace_json = {} # used to hold trace.json
@@ -35,9 +35,8 @@ def check_executable():
 def check_infiniteloop():
     try:
         output = check_output(f'{sys.argv[1]} ', stderr=STDOUT, timeout=5, shell = True)
-        return 0
     except:
-        return 1
+        exit("THIS PROGRAM MAY HAVE AN INFINITE LOOP")
 
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
