@@ -2,8 +2,7 @@
 #include <vector>
 #include <string>
 #include <map>
-#include <deque>
-#include <queue>
+
 int add(int a, int b) 
 {
     return a + b;
@@ -27,8 +26,6 @@ int main()
     bool isDavidSwag = 1;
     std::string foobar = "Computer Science\n";
     std::vector<int> vect;
-    std::deque<int> d = {7, 5, 16, 8};
-    std::queue<int> q(d);
     vect.assign(1,3);
     vect.push_back(5);
     vect.pop_back();

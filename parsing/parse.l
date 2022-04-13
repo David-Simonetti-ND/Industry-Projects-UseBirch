@@ -19,10 +19,21 @@ STRING \"{CHAR}+\"
 SKEY \[{STRING}\]" = "
 NKEY \[{SIGNEDNUM}\]" = "
 CKEY \[{SIGNEDNUM}" "{CCHAR}\]" = "
+
 VECTOR "std::vector of length "{SIGNEDNUM}", capacity "{SIGNEDNUM}" ="
 DEQUE "std::deque with "{SIGNEDNUM}" elements"
 QUEUE "std::queue wrapping: "
+STACK "std::stack wrapping: "
+ARRAY "_M_elems = "
+
 MAP "std::map with "{SIGNEDNUM}" elements ="
+SET "std::set with "{SIGNEDNUM}" elements ="
+MSET "std::multiset with "{SIGNEDNUM}" elements = "
+MMAP "std::multimap with "{SIGNEDNUM}" elements"
+DLLIST "std::list = "
+SLLIST "std::forward_list = "
+
+
 NAME [a-zA-Z0-9]+" ="
 
 %%
@@ -45,9 +56,40 @@ NAME [a-zA-Z0-9]+" ="
             return DEQUE; 
          }
 {QUEUE} {FPRINT("Encountering queue ") num_chars += strlen(yytext);}
+{STACK} {FPRINT("Encountering stack ") num_chars += strlen(yytext);}
 {MAP}   { 
             num_chars += strlen(yytext);
             FPRINT("Encountering map ")
+            return MAP; 
+         }
+{SET}   { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering set ")
+            return MAP; 
+         }
+{MSET}   { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering multiset ")
+            return MAP; 
+         }
+{MMAP}   { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering multi map ")
+            return MAP; 
+         }
+{ARRAY} { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering array ")
+            return ARRAY; 
+         }
+{DLLIST}   { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering doubly linked list ")
+            return MAP; 
+         }
+{SLLIST}   { 
+            num_chars += strlen(yytext);
+            FPRINT("Encountering singley linked list ")
             return MAP; 
          }
 \{ { FPRINT("Starting scope [ "); num_chars += strlen(yytext); return SSCOPE;}
