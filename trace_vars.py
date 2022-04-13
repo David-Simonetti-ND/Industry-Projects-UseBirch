@@ -108,8 +108,8 @@ def define_val_type(val, name=None): # recursive function used to change strings
         parse_in.write(f"{name} = {val}\n")
         parse_in.close()
         parse_in = open('myinput.in', 'r')
-        p = subprocess.Popen('parsing/parse', stdin=parse_in)
-        p.wait()
+        #p = subprocess.Popen('parsing/parse', stdin=parse_in)
+        #p.wait()
     # process maps 
     if "std::map" in val:
         map = {}

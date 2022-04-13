@@ -19,6 +19,26 @@ return_value = None
 args = {} # dictionary to hold function arguments
 command_line_args = [] # list to hold any given command line arguments
 
+def check_executable():
+    if len(sys.argv) < 2:
+        print("Please pass in at least one argument (executable you wish to run)!")
+        exit()
+    # Test whether this file exists by checking if the path exists
+    if not os.path.exists(sys.argv[1]):
+        print("This executable does not exist!")
+        exit()
+    # Test whether the file is an executable
+    if not os.access(sys.argv[1], os.X_OK):
+        print("This file is not an executable!")
+        exit()
+        
+def check_infiniteloop():
+    try:
+        output = check_output(f'{sys.argv[1]} ', stderr=STDOUT, timeout=5, shell = True)
+        return 0
+    except:
+        return 1
+
 def append_frame(): # call this function when all the global variables are up to date for the current frame, this will append the new frame
     global current_frame_number
     temp_dict = {}
@@ -48,10 +68,11 @@ output = open("output.txt", "w+")
 # Start gdb process
 gdbmi = GdbController()
 
-# Load binary passed in argv[1] and check we only have one arg
-if len(sys.argv) < 2:
-    print("Please pass in at least one argument (executable you wish to run)!")
-    exit()
+# Load binary passed in argv[1] and check we only have one arg, arg not .exe, or arg doesnt exist
+check_executable()
+
+#check for infinite loop
+check_infiniteloop()
 
 gdbmi.write(f'-file-exec-file {sys.argv[1]}')
 
@@ -196,7 +217,6 @@ while True: # infinite loop until we reach the end
 # output the trace.json from internal_trace_json
 output.close()
 os.remove("output.txt")
-os.remove("time.txt")
 out_file = open("trace.json", "w")
 json.dump(internal_trace_json, out_file, indent = 6)
 out_file.close()

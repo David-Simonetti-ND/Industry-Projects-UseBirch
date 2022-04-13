@@ -1,7 +1,9 @@
 BIN = bin
-all: argument_test example map_test recursion var_test vector_test containers
+all: argument_test example map_test recursion var_test vector_test containers infinite
 argument_test: argument_test.cpp
 	g++ -std=c++11 -Wall -ggdb argument_test.cpp -o ../$(BIN)/argument_test
+infinite: infinite.cpp
+	g++ -std=c++11 -Wall -ggdb infinite.cpp -o ../$(BIN)/infinite
 example: example.cpp
 	g++ -std=c++11 -Wall -ggdb example.cpp -o ../$(BIN)/example
 map_test: map_test.cpp
